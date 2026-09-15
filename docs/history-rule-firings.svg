@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 986 500" width="986" height="500" font-family="ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial,sans-serif">
+<style>.bg{fill:#fbfaf7}.ax{stroke:#c9c4bb;stroke-width:1}.gr{stroke:#e8e4dc;stroke-width:1}.lb{fill:#5d574d;font-size:11px}.ti{fill:#241f1a;font-size:15px;font-weight:600}.su{fill:#6b645a;font-size:11.5px}.s1{fill:none;stroke:#1f5c8b;stroke-width:2.2}.s2{fill:none;stroke:#b5541f;stroke-width:2.2}.d1{fill:#1f5c8b}.d2{fill:#b5541f}.bk{stroke:#9c8f7a;stroke-width:1;stroke-dasharray:3 3}.bkl{fill:#7a6f5c;font-size:10px}.tk{fill:#5d574d;font-size:9.5px}.jm{stroke:#b5541f;stroke-width:1;stroke-dasharray:2 4;opacity:.55}.jl{fill:#8a4318;font-size:10px;font-weight:600}</style>
+<rect class="bg" x="0" y="0" width="986" height="500"/>
+<text class="ti" x="66" y="26">Where the interface default&#8217;s rule firings came from</text>
+<text class="su" x="66" y="44">BWV 847, three voices, Tier::Full, seed 0x5EED &#8212; every commit that could move it. 707 pair-slices throughout, so the curve is raw counts.</text>
+<line class="gr" x1="66" y1="368.0" x2="962" y2="368.0"/>
+<text class="lb" x="58" y="372.0" text-anchor="end">0</text>
+<line class="gr" x1="66" y1="311.6" x2="962" y2="311.6"/>
+<text class="lb" x="58" y="315.6" text-anchor="end">20</text>
+<line class="gr" x1="66" y1="255.3" x2="962" y2="255.3"/>
+<text class="lb" x="58" y="259.3" text-anchor="end">40</text>
+<line class="gr" x1="66" y1="198.9" x2="962" y2="198.9"/>
+<text class="lb" x="58" y="202.9" text-anchor="end">60</text>
+<line class="gr" x1="66" y1="142.5" x2="962" y2="142.5"/>
+<text class="lb" x="58" y="146.5" text-anchor="end">80</text>
+<line class="gr" x1="66" y1="86.2" x2="962" y2="86.2"/>
+<text class="lb" x="58" y="90.2" text-anchor="end">100</text>
+<line class="ax" x1="66" y1="368" x2="962" y2="368"/>
+<line class="bk" x1="66" y1="216.4" x2="962" y2="216.4"/>
+<text class="bkl" x="72" y="211.4">53.8 &#8212; the constant the panel compares against (Bach, <tspan font-style="italic">dissonance only</tspan>, 8.20)</text>
+<line class="jm" x1="210.0" y1="64" x2="210.0" y2="368"/>
+<text class="jl" transform="translate(214.0,76)">8.34 +10.7</text>
+<line class="jm" x1="722.0" y1="64" x2="722.0" y2="368"/>
+<text class="jl" transform="translate(726.0,76)">8.47 +7.2</text>
+<polyline class="s2" points="82.0,133.8 114.0,133.8 146.0,133.8 178.0,133.8 210.0,103.7 242.0,103.7 274.0,103.7 306.0,103.7 338.0,103.7 370.0,103.7 402.0,103.7 434.0,103.7 466.0,111.8 498.0,111.8 530.0,111.8 562.0,111.8 594.0,111.8 626.0,111.8 658.0,111.8 690.0,111.8 722.0,91.5 754.0,91.5 786.0,87.3 818.0,91.5 850.0,91.5 882.0,91.5 914.0,91.5 946.0,91.5"/>
+<polyline class="s1" points="82.0,144.8 114.0,144.8 146.0,144.8 178.0,144.8 210.0,144.8 242.0,144.8 274.0,144.8 306.0,144.8 338.0,144.8 370.0,144.8 402.0,144.8 434.0,144.8 466.0,156.6 498.0,156.6 530.0,156.6 562.0,156.6 594.0,156.6 626.0,156.6 658.0,156.6 690.0,152.7 722.0,120.8 754.0,120.8 786.0,109.0 818.0,120.8 850.0,120.8 882.0,120.8 914.0,120.8 946.0,120.8"/>
+<circle class="d2" cx="82.0" cy="133.8" r="2.6"/>
+<circle class="d1" cx="82.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(82.0,379) rotate(58)">8.30</text>
+<circle class="d2" cx="114.0" cy="133.8" r="2.6"/>
+<circle class="d1" cx="114.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(114.0,379) rotate(58)">remove ui fr</text>
+<circle class="d2" cx="146.0" cy="133.8" r="2.6"/>
+<circle class="d1" cx="146.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(146.0,379) rotate(58)">fix degenera</text>
+<circle class="d2" cx="178.0" cy="133.8" r="2.6"/>
+<circle class="d1" cx="178.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(178.0,379) rotate(58)">8.33</text>
+<circle class="d2" cx="210.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="210.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(210.0,379) rotate(58)">8.34</text>
+<circle class="d2" cx="242.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="242.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(242.0,379) rotate(58)">8.34</text>
+<circle class="d2" cx="274.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="274.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(274.0,379) rotate(58)">8.37</text>
+<circle class="d2" cx="306.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="306.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(306.0,379) rotate(58)">9: where a</text>
+<circle class="d2" cx="338.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="338.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(338.0,379) rotate(58)">8.34</text>
+<circle class="d2" cx="370.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="370.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(370.0,379) rotate(58)">8.38</text>
+<circle class="d2" cx="402.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="402.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(402.0,379) rotate(58)">8.18</text>
+<circle class="d2" cx="434.0" cy="103.7" r="2.6"/>
+<circle class="d1" cx="434.0" cy="144.8" r="2.6"/>
+<text class="tk" transform="translate(434.0,379) rotate(58)">8.40</text>
+<circle class="d2" cx="466.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="466.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(466.0,379) rotate(58)">8.41</text>
+<circle class="d2" cx="498.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="498.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(498.0,379) rotate(58)">8.41</text>
+<circle class="d2" cx="530.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="530.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(530.0,379) rotate(58)">8.42</text>
+<circle class="d2" cx="562.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="562.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(562.0,379) rotate(58)">8.43</text>
+<circle class="d2" cx="594.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="594.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(594.0,379) rotate(58)">8.44</text>
+<circle class="d2" cx="626.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="626.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(626.0,379) rotate(58)">8.45</text>
+<circle class="d2" cx="658.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="658.0" cy="156.6" r="2.6"/>
+<text class="tk" transform="translate(658.0,379) rotate(58)">8.45</text>
+<circle class="d2" cx="690.0" cy="111.8" r="2.6"/>
+<circle class="d1" cx="690.0" cy="152.7" r="2.6"/>
+<text class="tk" transform="translate(690.0,379) rotate(58)">8.46</text>
+<circle class="d2" cx="722.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="722.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(722.0,379) rotate(58)">8.47</text>
+<circle class="d2" cx="754.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="754.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(754.0,379) rotate(58)">8.49</text>
+<circle class="d2" cx="786.0" cy="87.3" r="2.6"/>
+<circle class="d1" cx="786.0" cy="109.0" r="2.6"/>
+<text class="tk" transform="translate(786.0,379) rotate(58)">8.50</text>
+<circle class="d2" cx="818.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="818.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(818.0,379) rotate(58)">8.51</text>
+<circle class="d2" cx="850.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="850.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(850.0,379) rotate(58)">8.52</text>
+<circle class="d2" cx="882.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="882.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(882.0,379) rotate(58)">8.53</text>
+<circle class="d2" cx="914.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="914.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(914.0,379) rotate(58)">8.54</text>
+<circle class="d2" cx="946.0" cy="91.5" r="2.6"/>
+<circle class="d1" cx="946.0" cy="120.8" r="2.6"/>
+<text class="tk" transform="translate(946.0,379) rotate(58)">probe: where</text>
+<rect x="66" y="465" width="22" height="3" fill="#b5541f"/>
+<text class="lb" x="94" y="471">with the stretto &#8212; what the interface default writes</text>
+<rect x="418" y="465" width="22" height="3" fill="#1f5c8b"/>
+<text class="lb" x="446" y="471">without it</text>
+</svg>
