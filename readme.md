@@ -116,6 +116,11 @@ legal fills, is [§9](#9-roadmap). How this was reached, and what did not surviv
     - [8.4.10 Mattheson transcribed, and the generator off the end of three of his eight dials](#8410-mattheson-transcribed-and-the-generator-off-the-end-of-three-of-his-eight-dials)
     - [8.4.11 The breath, the disposition and the foot: the first Mattheson claim to fail by measurement](#8411-the-breath-the-disposition-and-the-foot-the-first-mattheson-claim-to-fail-by-measurement)
     - [8.4.12 An affect as a band that varies over the piece, and the two dials it cannot yet reach](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)
+    - [8.4.13 The systematic literature, and what it says this design has wrong](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong)
+    - [8.4.14 Why the band cannot reach, and the first dial the generator starts inside](#8414-why-the-band-cannot-reach-and-the-first-dial-the-generator-starts-inside)
+    - [8.4.15 A compass is a range, and the search had been reading it as freedom](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom)
+    - [8.4.16 What the span bound is worth, and the percentile it has to be read off](#8416-what-the-span-bound-is-worth-and-the-percentile-it-has-to-be-read-off)
+    - [8.4.17 The default flipped, and what moved](#8417-the-default-flipped-and-what-moved)
   - [8.5 Standing still: texture, repetition, and the bounds the book supplies](#85-standing-still-texture-repetition-and-the-bounds-the-book-supplies)
     - [8.5.1 Both ways of choosing a texture collapse to a constant](#851-both-ways-of-choosing-a-texture-collapse-to-a-constant)
     - [8.5.2 The rule that would have fixed it is not in the book](#852-the-rule-that-would-have-fixed-it-is-not-in-the-book)
@@ -155,7 +160,12 @@ legal fills, is [§9](#9-roadmap). How this was reached, and what did not surviv
   - [8.10 What a measurement is worth](#810-what-a-measurement-is-worth)
     - [8.10.1 The whole history of one number is two commits](#8101-the-whole-history-of-one-number-is-two-commits)
 - [9. Roadmap](#9-roadmap)
-  - [Open problems, in rough order of how much they block](#open-problems-in-rough-order-of-how-much-they-block)
+  - [9.1 The central problem: a criterion that selects](#91-the-central-problem-a-criterion-that-selects)
+  - [9.2 The other gap: which affect the music has, and what in the texture puts it there](#92-the-other-gap-which-affect-the-music-has-and-what-in-the-texture-puts-it-there)
+  - [9.3 Harmony, scheduled per beat](#93-harmony-scheduled-per-beat)
+  - [9.4 Two smaller shapes, waiting on the same thing](#94-two-smaller-shapes-waiting-on-the-same-thing)
+  - [9.5 Open problems, in rough order of how much they block](#95-open-problems-in-rough-order-of-how-much-they-block)
+  - [9.6 A possible experiment: giving the criterion something to say about harmony](#96-a-possible-experiment-giving-the-criterion-something-to-say-about-harmony)
 - [10. Reproducing the results](#10-reproducing-the-results)
   - [10.1 Environment and data](#101-environment-and-data)
   - [10.2 Which command produces which section](#102-which-command-produces-which-section)
@@ -4576,8 +4586,9 @@ rhythmic half of both devices is not measured here at all.
 
 ##### Most of it varies as much in Josquin's century as in Bach's
 
-There is no corpus labelled by affect and this project will not build one: that is
-[§5](#5-what-this-will-not-do)'s excluded question wearing a dataset. What is testable without
+There is no corpus labelled by affect and this project will not build one — a labelled corpus is a
+record of what listeners felt, and [§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong)
+is where the case for leaving that alone is argued. What is testable without
 labels is whether the feature a prescription names **is available to carry an affect at all** — a
 quantity the style pins is not a dial a composer can turn, and two quantities that move together
 are one dial and not two.
@@ -4593,18 +4604,25 @@ are one dial and not two.
 | unison share | 308% | 478% | 0.65 |
 | uneven attacks | 108% | 283% | 0.38 |
 
-**Six of the eight are within a factor of two of themselves across two and a half centuries.** That
-is a stronger result than §8.1.2 could report for Fux's melodic rule, which fires thirty-eight times
-as often in one corpus as in the other, and it is the answer to the question this section was opened
-to ask: most of the measurable part of the *Affektenlehre* is era-neutral in the only sense this
-project can test it. A doctrine written in 1739 names features that Ockeghem's century turns just as
-freely.
+**Seven of the eight are within a factor of two of themselves across two and a half centuries** —
+every ratio above lies between `0.5` and `2.0` except `uneven attacks` at `0.38`. That is a stronger
+result than §8.1.2 could report for Fux's melodic rule, which fires thirty-eight times as often in
+one corpus as in the other, and it is the answer to the question this section was opened to ask: most
+of the measurable part of the *Affektenlehre* is era-neutral in the only sense this project can test
+it. A doctrine written in 1739 names features that Ockeghem's century turns just as freely.
 
-The two that are not era-neutral are **the two the third witness added**, and both run the same way:
-the fifteenth century turns the texture dial and the rhythm dial much harder than the fugue does —
-unison share to `0.54` against Bach's `0.09`, unevenness to `3.83` against `2.29`. A Baroque fugue
-holds four voices apart as a matter of course; Josquin lets them fall together and pull apart again,
-and that is a dial the later repertoire has largely stopped using.
+> **Corrected.** This paragraph read *six* until §8.4.13 counted the column, and the sentence below
+> it made a second, different claim — that the two failing rows were the two the third witness added
+> — which the column does not support either, `unison share` sitting at `0.65`. Two counts, neither
+> matching the table printed above them. The reading that caught it was of somebody else's
+> encyclopedia article, which is the argument for reading one.
+
+**The two the third witness added are still the ones that separate the centuries**, but the case is
+an absolute one and not a ratio: the fifteenth century turns the texture dial and the rhythm dial
+much harder than the fugue does — unison share to `0.54` against Bach's `0.09`, unevenness to `3.83`
+against `2.29`. A Baroque fugue holds four voices apart as a matter of course; Josquin lets them fall
+together and pull apart again, and that is a dial the later repertoire has largely stopped using.
+Only `uneven attacks` fails the ratio test as well.
 
 ##### They are not eight dials — and the three that are independent are the three nobody found
 
@@ -4634,22 +4652,30 @@ say.
 The same eight, on three-voice fugues generated from all 24 WTC subjects, against the corpora they
 were written from:
 
-| | Bach's range | 15th c. range | generated | |
-|---|---|---|---:|---|
-| mean interval, steps | 1.22 – 2.19 | 1.05 – 1.85 | **2.72** | off the end of both |
-| conjunct share | 0.44 – 0.87 | 0.58 – 0.88 | **0.45** | at Bach's floor, under the 15th c. |
-| rising share | 0.41 – 0.55 | 0.38 – 0.52 | 0.49 | inside both |
-| held in a third | 0.10 – 0.43 | 0.14 – 0.48 | **0.11** | at Bach's floor, under the 15th c. |
-| hard firings per 1000 | 30.2 – 231.8 | 0.0 – 116.5 | 61.2 | inside both |
-| compass, steps | 12.0 – 18.7 | 5.7 – 11.6 | 12.0 | the design fixture's, not a result |
-| unison share | 0.00 – 0.09 | 0.00 – 0.54 | 0.07 | inside both, high for a fugue |
-| uneven attacks | 0.55 – 2.29 | 0.34 – 3.83 | 1.02 | inside both, below Bach's median |
+| | Bach's range | 15th c. range | generated **now** | was, before §8.4.17 | |
+|---|---|---|---:|---:|---|
+| mean interval, steps | 1.22 – 2.19 | 1.05 – 1.85 | **2.14** | 2.72 | inside Bach, over the 15th c. |
+| conjunct share | 0.44 – 0.87 | 0.58 – 0.88 | **0.56** | 0.45 | inside Bach, just under the 15th c. |
+| rising share | 0.41 – 0.55 | 0.38 – 0.52 | 0.50 | 0.49 | inside both |
+| held in a third | 0.10 – 0.43 | 0.14 – 0.48 | **0.18** | 0.11 | inside both |
+| hard firings per 1000 | 30.2 – 231.8 | 0.0 – 116.5 | 74.2 | 61.2 | inside both, at Bach's median |
+| compass, steps | 12.0 – 18.7 | 5.7 – 11.6 | 12.0 | 12.0 | the design fixture's, not a result |
+| unison share | 0.00 – 0.09 | 0.00 – 0.54 | 0.06 | 0.07 | inside both |
+| uneven attacks | 0.55 – 2.29 | 0.34 – 3.83 | 1.02 | 1.02 | inside both — rhythmic, so unmoved |
 
-**Three of the eight are off the end, and all three in the same direction.** The generator leaps
-wider than any piece in either corpus, moves by step less than any Renaissance piece, and stands
-still less than any Renaissance piece. Read through the transcription that is not eight dials set
-badly; it is one dial pushed to its stop. On Mattheson's own terms this generator can write exactly
-one affect, and it is not one he names.
+**The right-hand pair of columns is this section's finding and its repair standing side by side.**
+When §8.4.12 was written, three of the eight were off the end and all three in the same direction:
+the generator leapt wider than any piece in either corpus, moved by step less than any Renaissance
+piece, and stood still less than any Renaissance piece. Read through the transcription that was not
+eight dials set badly; it was **one dial pushed to its stop**, and on Mattheson's own terms this
+generator could write exactly one affect, and not one he names.
+
+[§8.4.17](#8417-the-default-flipped-and-what-moved) is that diagnosis acted on. One bound on how far a
+voice may travel locally moved all three, and **nothing is off the end of both corpora any more** —
+`held in a third` came fully inside, `mean interval` came inside Bach. The two dials that did not
+move are the two that should not have: `rising share`, which §8.4.10 found independent of every
+other feature in both corpora, and `uneven attacks`, which is rhythmic and so beyond anything
+§2.6 lets the search touch.
 
 The interval row was already visible — §8.4.3 printed `2.78` against Bach's `1.66` for years and
 nobody read it as anything but a diagnostic, which is what [§9](#9-roadmap)'s item was written to
@@ -4940,25 +4966,28 @@ before §8.4.11 measured them.
 
 Each mood alone, flat at full strength, five seeds averaged, on the three-voice fixture.
 
-| | interval | conjunct | rising | held | unison | diss/1k |
-|---|---:|---:|---:|---:|---:|---:|
-| **no band** | 2.953 | 0.199 | 0.555 | 0.035 | 0.048 | 68.6 |
-| corpus floor | 1.05 | 0.44 | 0.38 | 0.10 | 0.00 | |
-| corpus ceiling | 2.19 | 0.88 | 0.55 | 0.48 | 0.54 | |
-| joy §. 56 | **2.643** | **0.258** | 0.561 | 0.041 | 0.076 | 65.7 |
-| sadness §. 57 | **2.613** | **0.265** | 0.557 | 0.046 | 0.076 | 65.7 |
-| pride §. 72 | 3.041 | 0.195 | **0.550** *reached* | 0.032 | 0.068 | 67.2 |
-| humility §. 73 | 2.922 | 0.224 | **0.523** | 0.029 | 0.062 | 70.1 |
-| obstinacy §. 74 | 2.654 | 0.259 | 0.585 | **0.114** | 0.079 | 80.3 |
-| calm §. 82 | 3.010 | 0.191 | 0.571 | 0.025 | **0.254** | 48.2 |
+| | interval | conjunct | rising | held | unison | motion | diss/1k |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **no band** | 2.633 | 0.244 | 0.563 | 0.040 | 0.054 | 1.232 | 70.1 |
+| corpus floor | 1.05 | 0.44 | 0.38 | 0.10 | 0.00 | 0.00 | |
+| corpus ceiling | 2.19 | 0.88 | 0.55 | 0.48 | 0.54 | 1.05 | |
+| joy §. 56 | **2.335** | **0.338** | 0.558 | 0.076 | 0.054 | 1.120 | 77.4 |
+| sadness §. 57 | **2.321** | **0.343** | 0.561 | 0.073 | 0.051 | 1.087 | 77.4 |
+| pride §. 72 | 2.599 | 0.250 | **0.558** *reached* | 0.051 | 0.054 | 1.122 | 71.5 |
+| humility §. 73 | 2.469 | 0.296 | **0.534** | 0.058 | 0.042 | 1.168 | 73.0 |
+| obstinacy §. 74 | 2.332 | 0.326 | 0.569 | **0.140** | 0.054 | 1.057 | 61.3 |
+| calm §. 82 | 2.628 | 0.257 | 0.572 | 0.031 | **0.223** | 1.172 | 67.2 |
+| despair §. 80 | 2.520 | 0.292 | 0.557 | 0.063 | 0.056 | **1.012** *reached* | 74.5 |
+
+Re-run under §8.4.17's default; the seventh mood and the sixth dial arrived with §8.4.14.
 
 **Every mood moves the dial its own paragraph names, and none moves one away from it** — that is
 `compose::tests::an_affect_band_moves_the_dial_its_paragraph_names`, and it is the assertion a sign
-error anywhere between `Mood::targets` and `Plan::charge` would break. One reaches its band outright.
-Two move a long way: obstinacy takes *held* from `0.035` to `0.114` and calm takes *unison* from
-`0.048` to `0.254`, five times over. Calm also drops the violation rate from `68.6` to `48.2` and
-obstinacy raises it to `80.3`, neither of which was asked for and both of which follow — voices on
-one pitch cannot clash, and a voice refusing to leave a third will.
+error anywhere between `Mood::targets` and `Plan::charge` would break. Two reach their band outright.
+Two move a long way: obstinacy takes *held* from `0.040` to `0.140` and calm takes *unison* from
+`0.054` to `0.223`, four times over. Obstinacy also drops the violation rate from `70.1` to `61.3`
+and joy raises it to `77.4`, neither of which was asked for and both of which follow — a voice
+refusing to leave a third has fewer ways to clash, and a voice asked for wide intervals has more.
 
 ##### The sample count is the dial between drawing and optimising
 
@@ -4968,6 +4997,11 @@ one pitch cannot clash, and a voice refusing to leave a third will.
 |---|---:|---:|---:|---:|---:|
 | interval, joy | 2.953 | 2.860 | 2.747 | **2.643** | 2.550 |
 | unison, calm | 0.048 | 0.146 | 0.208 | **0.254** | 0.299 |
+
+> Measured before §8.4.17 flipped `Layout::span` on, so the absolute figures are the unbounded
+> generator's. What the sweep is about — that the reach of a criterion grows as a logarithm of its
+> sample count — is a property of selection and not of the baseline it selects from, and §8.4.14
+> extends the same sweep to 3 072. The baseline moved; the logarithm did not.
 
 **One sample moves nothing at all**, which is the control this needed: with a single draw there is
 nothing to choose between, and every mood leaves the music exactly where it found it. Past that the
@@ -4980,18 +5014,27 @@ the music can reach the band**, more samples only find it sooner and everything 
 distance-to-band, and the larger `n` the more it is one. `AFFECT_SAMPLES = 48` is where the reach is
 worth having and the search is still recognisably drawing.
 
-##### The failure, which is the interesting part
+##### The failure, which is the interesting part — and which was fixed three sections later
 
-**Joy and sadness are not separable on this generator.** They are opposite ends of §§. 56–57's dial,
-and they land at `2.643` and `2.613` — three hundredths apart on a range `1.14` wide, at every
-sample count tried.
+**Joy and sadness were not separable on this generator.** They are opposite ends of §§. 56–57's
+dial, and when this section was written they landed at `2.643` and `2.613` — three hundredths apart
+on a range `1.14` wide, at every sample count tried.
 
-The cause is not the mechanism, and §8.4.10 had already written it down: **this generator's mean
-interval is above everything either composer wrote.** Unbanded it is `2.953` against a corpus
-ceiling of `2.19`. Both joy's target (`2.02`) and sadness's (`1.22`) are therefore *downwards*, the
-band pulls hard in the one direction they agree on, and what separates them is past where the legal
-set of any block reaches. A criterion that selects can only select from what the search offers it,
-and on this dial the search does not offer anything a fifteenth-century composer would recognise.
+The cause was not the mechanism, and §8.4.10 had already written it down: **this generator's mean
+interval was above everything either composer wrote.** Unbanded it was `2.953` against a corpus
+ceiling of `2.19`. Both joy's target (`2.02`) and sadness's (`1.22`) were therefore *downwards*, the
+band pulled hard in the one direction they agree on, and what separates them lay past where the
+legal set of any block reached. A criterion that selects can only select from what the search offers
+it, and on this dial the search offered nothing a fifteenth-century composer would recognise.
+
+> **That diagnosis was right and it was actionable.** §8.4.14 proved selection could not repair it —
+> the reach of a criterion grows as a logarithm of its sample count, so the remaining gap would have
+> cost about `10⁹` samples a block — and §8.4.15 found what could: the search had been reading
+> `Design::compass`, a whole-piece range, as the freedom a voice has at every slice.
+> [§8.4.17](#8417-the-default-flipped-and-what-moved) flipped that bound on by default, and on the 24 WTC
+> subjects the separation went from `+0.075` to **`+0.241`**, with joy landing on its own target and
+> stopping while sadness kept going. The paragraph above is left standing because the diagnosis in
+> it is what made the repair findable.
 
 So the band closes about a third of §8.4.10's gap and stops. What would close the rest is not a
 bigger `n` — 192 samples buys `0.09` more — but a search whose legal set is centred somewhere else,
@@ -4999,6 +5042,703 @@ which is a change to `realise::prescribe_voice` or to the compass and not to thi
 that work are the two nobody had measured before §8.4.10**: *held* and *unison*, §§. 74 and 82,
 which were the two the first readings of the book refused as undecidable or absent. The dials that
 do not work are the famous ones.
+
+#### 8.4.13 The systematic literature, and what it says this design has wrong
+
+[§8.4.10](#8410-mattheson-transcribed-and-the-generator-off-the-end-of-three-of-his-eight-dials) to
+[§8.4.12](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)
+all rest on **one 1739 book**. [§9](#9-roadmap) names the systematic literature — the psychology of
+music and emotion — as the other side of the question and records that none of it had been read.
+This is a reading of the general theory, taken through the survey article that maps it, and held to
+the same standard as Mattheson: a claim is worth something here only if it names a structural
+feature this program can count, and only if it survives an attempt to refute it.
+
+##### The tally is the finding
+
+The article was read through five lenses — how the field classifies emotion, which structural
+features it maps, by what mechanism, what it says against itself, and what its bibliography actually
+contains. Every claim was then judged against this repository and independently attacked twice, once
+for whether the quoted sentence is in the source and once for whether the repository verdict holds.
+200 claims extracted, 191 distinct, **166 survived and 25 were refuted or corrected**.
+
+| what the surviving claims turned out to be | |
+|---|---:|
+| **not about the music** — listeners, performers, therapy, memory, context | **102** |
+| not measurable here | 28 |
+| measurable but **not turnable** — §2.6 fixes rhythm, and there is no dynamics and no timbre | 22 |
+| already done in §8.4.10–§8.4.12 | 10 |
+| **measurable and turnable** | **4** |
+
+Nearly two thirds of what this literature says is not about the music at all. That is not a complaint
+about the field — it studies listeners, and listeners are most of the phenomenon. It is a statement
+of how little of it can become a rule in a program that only writes notes, and it is the honest
+frame for everything below.
+
+##### The field's own principal model draws §5's line, independently
+
+Juslin and Västfjäll's **BRECVEM** model lists seven mechanisms by which music induces emotion.
+Sorted by whether the mechanism names something in the score or something in the listener:
+
+| score-side | listener-side |
+|---|---|
+| **B** brain stem reflex — sudden, loud, dissonant | **E** evaluative conditioning — what the music was paired with |
+| **R** rhythmic entrainment — rhythm against heart rate | **V** visual imagery — the listener's own pictures |
+| **M** musical expectancy — violated, delayed or confirmed | **E** episodic memory — *"Darling, they are playing our tune"* |
+| **C** emotional contagion — the hinge, below | |
+
+The split is exact: **every mechanism that names a structural feature is on the usable side, and
+every mechanism on the unusable side names none.** And Juslin's own 2013 addition to the model —
+*aesthetic judgement*, defined in the article as *"a measure of an individual's judgement of a piece
+of music's aesthetic value"* resting on *"varying personal preferences"* — is placed **outside** the
+seven elicitation mechanisms. That is [§5](#5-what-this-will-not-do)'s cut, drawn by the field's
+principal model, on its own authority and for its own reasons.
+
+**Emotional contagion is why any of this is worth doing.** It is the only mechanism in the list that
+converts emotion *perceived in* the music into emotion *felt by* the listener. So a program that
+controls the perceived affect — the descriptive question — reaches feeling without ever having to
+reason about a listener, which is the only version of this problem a generator could address. The
+article also reports that *"perceived emotions are also more consistent than elicited emotions"*, so
+the half this project can address is the half that replicates.
+
+##### It predicts §8.4.10's mode result, by a method with nothing in common
+
+> *Studies on young children and isolated cultures show innate associations for features similar to a
+> human voice (e.g. low and slow is sad, faster and high is happy). Cross-cultural studies show that
+> associations between major and minor modes and consonance and dissonance are probably **learned**.*
+
+§8.4.10 measured the mode against the feature Mattheson actually names and found it carrying `20%`
+of the corpus range in Bach and **`0%`** in the fifteenth century, and refused it. This literature
+reaches the same verdict from cross-cultural listener studies — a method with no overlap at all with
+counting intervals in two corpora. It says the same of **consonance and dissonance**, which is
+[§8.1.2](#812-two-corpora-stratify-the-rulebook)'s stratification arriving from outside.
+
+It also says which cues *are* innate, and they are the ones a fugue generator cannot turn: speed is
+[§2.6](#26-what-is-not-a-variable-rhythm)'s, and register is discussed below.
+
+##### Six names is not what is missing
+
+The premise this reading was opened to test — that six moods out of Mattheson is far from complete —
+turns out to be the wrong shape of question, and the article is unexpectedly clear about it once the
+words are counted rather than the impressions.
+
+**It never uses the field's own taxonomy words.** *Dimensional*, *circumplex*, *discrete emotion*
+and *categorical* appear nowhere in it. Exactly two axes are ever named — valence and arousal, nine
+occurrences each — and no third. Hevner is cited once, for major and minor, and her adjective circle
+is not mentioned; Russell is not mentioned at all.
+
+**It runs names and axes side by side and never reconciles them**, and the seam is visible inside one
+table: tempo and loudness resolve to *axes* (`Fast tempo: arousal, valence`), while mode, harmony and
+style resolve to *names* (`Major tonality: happiness, joy`). Neither vocabulary is translated into
+the other anywhere in the article.
+
+So names were **supplemented, not replaced**, and the two things the literature actually offers
+against a list of six are about shape rather than length:
+
+- *"Rather than a single emotional state, inner feelings are better thought of as the products of
+  multiple emotional streams"* — Robinson's process theory, which is an argument for several curves
+  at once rather than for more names, and is what `affect::Plan` already is.
+- *"Past research has argued that opposing emotions like happiness and sadness fall on a bipolar
+  scale, where both cannot be felt at the same time. More recently, scientists have suggested that
+  happiness and sadness are experienced separately, which implies that they can be felt
+  concurrently."*
+
+And there is a ceiling on the list that no amount of transcription raises: *"Music without lyrics is
+unlikely to elicit social emotions like anger, shame, and jealousy; it typically only elicits basic
+emotions, like happiness and sadness."* Everything this generator writes is without lyrics. **That
+sentence is cited to a podcast**, which is not a source this document would otherwise carry, and it
+is recorded here as what the article claims rather than as something established.
+
+> **The mixed-cue result bears on `Plan::band_at` and does not settle it.** That function averages
+> moods naming one feature, so joy and sadness give their weighted middle. The article's answer for
+> *two different cues* pointing opposite ways is not a middle — it is both felt at once, at lower
+> intensity. The two cases are different and the implementation already separates them: moods on
+> **different** features both apply in full, which is mixed-cue music, and moods on the **same**
+> feature must average, because no line can be wide and narrow at once. What the article adds is the
+> reason §8.4.12's joy and sadness could never have separated: Mattheson gives both affects *the same
+> dial*, and mixed-cue music by definition needs two. The second cue that would separate them is mode
+> — dead by measurement — or articulation and tempo, dead by §2.6.
+
+##### The one thing it says this design has structurally wrong
+
+Six places in the article, drawing on three separate literatures, say the same thing in different
+words: **the carrier of affect is a change against what came before, not a level.**
+
+| where | what it says |
+|---|---|
+| the feature table, harmony row | resolving harmonies give tension and release; *unexpected* harmonies give surprise |
+| the harmony subsection | the surprise of a progression's **last chord against the previous three** (Daikoku et al. 2024) |
+| the neuroscience section | predictive coding; *"the emotional power of anticipation and tension"* (Vuust et al. 2009) |
+| BRECVEM **M** | expectation *violated, delayed or confirmed* |
+| physiological responses | entrainment of neural timing, attention and expectation |
+| expressive behaviour | *"**Changes in harmony** can also cause outward physical responses such as shivering or goose bumps, while tears and a lump-in-the-throat sensation are provoked by **changes in melody**"* |
+
+Every member of `affect::Feature` is a **level inside a window** — a mean interval, a share of
+conjunct moves, a share of rising moves, a share of attacks held, a share of time in unison. None of
+them is a contrast *between* windows. The literature's repeated claim is that the second is where the
+affect lives, and the last row above splits it by dimension and gives harmony and melody distinct
+effects — which is the pair this repository measures with two separate instruments.
+
+**§8.4.11 had already built the quantity and §8.4.12 did not use it.** Cloud momentum is by
+construction a change against the previous window, tensile strain a deviation from the piece's own
+context, and §8.4.11 closes by saying so: *the band is still unspecified; the quantity to draw it
+around now exists*. This article is an outside witness that the right quantity was named and then
+dropped — and a witness from a different literature, which is what this repository asks of a second
+reading of anything.
+
+##### What survived as actionable, and what did not
+
+**Register, and it is the clean one.** The article makes it an *innate* and cross-culturally
+universal cue, explicitly contrasted with the learned ones, and it is the only innate cue this
+generator turns: `realise::domain` offers the key's whole scale across the compass at every slice, so
+where a voice actually sits inside its range is chosen by the search. The realised range is measured
+by `kern::compass` and `shape::compass`, and §8.4.10 already prints its two-corpus figures — Bach
+`12.0`–`18.7` steps against the fifteenth century's `5.7`–`11.6`. There is no `Feature` for it.
+
+> And the reason `affect.rs` gives for leaving it out does not hold. Its doc says *"Compass is not
+> here although §. 80 names it: it is `Design::compass`, set before a note is written"* — which
+> conflates the **bound** with the **realised range**. They are different numbers: the first is a
+> parameter, the second is an outcome of the search and is what every other `Feature` is. This is a
+> defect in this repository's own comment, found by reading somebody else's encyclopedia article.
+
+**Pitch variability, which is neither of the two things it looks like.** *"Music that varies more in
+pitch is associated with higher levels of arousal in listeners"* — and a line can have a wide compass
+of small steps or large leaps inside a narrow band, so this is neither `Feature::Interval` (step
+size) nor compass (range). `shape::variety` exists and no `Feature` uses it. §8.4.10's own
+correlation table refuses the identification in the corpus that matters: interval against compass is
+`+0.70` in Bach but `+0.18` in the fifteenth century.
+
+**Harmony, contested, and the dispute is worth recording because both sides are partly right.** It is
+the only row of the article's five-row table that is live here — tempo and style are §2.6's, loudness
+is not in the model, mode failed the two-corpus test — and it is the row the reading nearly missed.
+Against it: the chord progression is **not** turnable by this criterion. `realise::Problem::plan` is
+an *input*, `compose::Run` builds it once and hands the same plan to every `fill_block`, so all
+`AFFECT_SAMPLES` candidates that `Plan::charge` ranks share one chord plan; `experiments::tension`
+has exactly one call site in the repository and it is a probe; `harmony::is_cadence` has none at all.
+For it: cloud momentum and tensile strain are computed from the **sounding pitches**, which do differ
+between candidates, so the *voicing* of a fixed progression moves them. The honest position is that
+*unexpected harmony → surprise* is unreachable while the plan is upstream of the draw, and *tension
+and release* is reachable only as far as voicing can carry it — which is a quantity nobody has
+measured.
+
+##### Two corrections this reading forces on already-committed text
+
+**§8.4.10's arithmetic is wrong by one.** Its ratio column reads `1.10`, `1.38`, `0.99`, `1.02`,
+`0.59`, `0.72`, `0.65`, `0.38`; seven of those lie between `0.5` and `2.0`, and the section says six.
+Worse, its prose then names *unison share* as one of the two that are not era-neutral, and unison's
+ratio is `0.65` — inside. That sentence is arguing from the absolute figures (`0.54` against `0.09`)
+and not from the column printed above it, so the section states two different counts and neither
+matches its own table. Corrected in place.
+
+**"§5's excluded question" is shorthand §5 does not license.** `affect.rs` and §8.4.10 both cite §5
+for excluding the listener's reaction. §5 excludes *whether the result is good* — value judgement and
+taste — and says nothing about what a listener feels. The exclusion those two places want is real and
+this section is where it is actually argued, from BRECVEM's own split. What §5 **does** exclude, in as
+many words, is *"Performance. Expressive timing, dynamics, ornamentation, articulation"* — which
+independently disposes of the article's `Style` row, staccato against legato, and of its `Loudness`
+row.
+
+##### The source is an encyclopedia, and it shows
+
+Worth recording because this document's rule is to never carry a quote it cannot source, and an
+encyclopedia is a map to sources rather than a source.
+
+- The claim that **tempo is the most important factor** — the article's single strongest ranking
+  statement, and the framing sentence that licenses its whole feature table — rests on one reference
+  whose author names are both corrupted: `Gabrielle, A.` and `Stromboli, E.`, for **Gabrielsson, A.
+  and Lindström, E.**, *"The influence of musical structure on emotional expression"* (2001). Title,
+  year and pages are right, which is what makes it hard to see. §9 already names the correct authors.
+- §9 also says those authors rank the cues **mode first, then tempo**. This article, citing them,
+  says tempo. The two statements are about different chapters by the same pair and neither could be
+  reached here, so the disagreement is recorded and not resolved.
+- **Hevner** is cited once, and it is Hevner *1935* on the major and minor modes, not the *1936*
+  adjective-circle paper §9 names. **Juslin and Laukka do not appear in the article at all**, so it
+  is not a route to the meta-analysis §9 wants.
+- The lead citation for *"perception of basic emotional features is culturally universal"* is a
+  Psychology Today blog post, with two journal articles behind it.
+
+#### 8.4.14 Why the band cannot reach, and the first dial the generator starts inside
+
+`cargo test --release --lib probe_affect_band -- --ignored --nocapture`
+`SAMPLES=n cargo test --release --lib probe_affect_band -- --ignored --nocapture`
+
+[§8.4.12](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)
+built a criterion that works mechanically and barely moves the music: joy and sadness land three
+hundredths apart on a range `1.14` wide. It blamed the baseline — the generator writes wider
+intervals than anything in either corpus — and left it there.
+[§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong) then found, from
+outside, that every feature the criterion bands is a *level* where the literature keeps saying the
+carrier is a *change*. This section settles the first and acts on the second.
+
+##### Selection cannot fix the baseline, and here is the arithmetic
+
+The gap decomposes into three parts, and only the middle one is anybody's doing.
+
+| mean melodic interval, in steps | |
+|---|---:|
+| a pitch drawn **uniformly from the legal domain**, twice, independently | **3.30** |
+| what the shipped draw actually writes, no band | **2.95** |
+| with a band, at 3 072 samples a block | **2.44** |
+| Bach's fugues | 1.22 – 2.19 |
+
+The first figure is arithmetic rather than measurement: the fixture's compass is nine steps, so
+`realise::domain` offers ten diatonic pitches, and the mean absolute difference of two uniform draws
+from `n` consecutive integers is `(n² − 1) / 3n` — `3.30` at `n = 10`.
+
+**The rulebook closes about a fifth of the distance to Bach and stops.** `3.30` to `2.95` is all the
+counterpoint does, and that is not a defect in the rules: `Rule::ForbiddenMelodic` is in the hard
+tier and enforced, and what it forbids is a list of *named intervals* — augmented, diminished,
+sevenths, past the octave. **Nothing in the book bounds an average.** Every leap in a mean of `2.95`
+can be individually legal, and is.
+
+Then the band, swept over its sample count:
+
+| samples | 1 | 4 | 12 | 48 | 192 | 768 | 3 072 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| mean interval under joy | 2.953 | 2.860 | 2.747 | 2.643 | 2.550 | 2.525 | **2.441** |
+
+Each **fourfold** multiplication of the sample count buys about `0.10` steps early and about `0.055`
+late. At that rate the remaining `0.78` to Bach's `1.66` costs on the order of **10⁹ samples a
+block**. Selection is a logarithm and the gap is a constant, so the two never meet.
+
+> **So §8.4.12's failure is confirmed as a baseline problem and not a sampling problem, and the
+> confirmation is the useful part.** At 3 072 samples joy and sadness sit at `2.441` and `2.399` —
+> `0.042` apart, against targets `0.80` apart. Sixty-four times the sampling of §8.4.12's endorsed
+> setting buys four hundredths of separation. **A criterion that selects cannot repair a draw that is
+> aimed somewhere else**, and no amount of the first will substitute for the second.
+
+What would move it has to act on the draw rather than after it, and this document has already
+measured two of the three candidates and refused them: the Boltzmann tilt is repertoire-specific
+([§8.2.1](#821-realisation-stops-at-two-free-voices)), and optimising a positive criterion has a
+degenerate optimum ([§8.4.3](#843-every-positive-criterion-has-a-degenerate-optimum)). The third is
+the compass, which is a `Design` field nobody has swept. That is the open question this section
+leaves, and it is a sharper one than §8.4.12 could state.
+
+##### A dial that is a change and not a level
+
+§8.4.13's one structural criticism was that every `affect::Feature` is a quantity held steady inside
+a window, where six places across three literatures say affect rides on the contrast against what
+came before. §8.4.11 had already built the contrast quantity and §8.4.12 had not used it.
+
+It could not have: **`experiments` is a module of the measurement binary**, so nothing in the library
+could call it, and a criterion wanting to band a tension quantity was unwriteable. Chew's spiral
+array is now `src/spiral.rs` in the library — `spiral`, `centre`, `cloud_diameter` and `tension`
+unchanged, and the test pinning their geometry moved with them. `tension` takes voices rather than a
+whole `Piece`, which is what lets `affect` call it at all.
+
+**`Feature::Motion`** is the median distance the centre of effect travels from one bar to the next.
+Its magnitudes come from where every other feature's do — `probe_rhetoric`, both corpora:
+
+| cloud momentum, per bar | floor | median | ceiling |
+|---|---:|---:|---:|
+| Bach, 24 fugues | 0.32 | 0.42 | 0.77 |
+| 15th century, 200 pieces | 0.00 | 0.62 | 1.05 |
+
+And **`Mood::Despair`**, from the half of Part I ch. 3 §. 80 that §8.4.10 transcribed and could not
+use. That paragraph leads *auf sonderbare Extremitäten von allerley Gattung* — extremes of every
+kind, which §8.4.10 read as compass and had no feature for — and then *zu ungemeinen Fällen und
+seltsamen ungereimten tollen Ton-Fügungen*: to uncommon cases and strange, incongruous, mad
+**joinings of notes**. Reading *Ton-Fügungen* as harmonic motion is this document's interpretation
+and is marked as one in the source, because the word is *joinings* and a reader could take it for
+voice-leading instead. It is recorded so a later reader can disagree, which is what §8.4.10 had to do
+with somebody else's gloss of the same book.
+
+##### It passes the test this document applies to every feature
+
+§8.4.10 asks two things of a dial: does the style turn it, and is it a dial of its own rather than a
+re-reading of one already counted? Added to that section's correlation table as a ninth row:
+
+| motion against | its strongest correlate |
+|---|---|
+| Bach, 24 fugues | `−0.51` with rising share — **below** the `0.6` line, and every other pair weaker |
+| 15th century, 200 pieces | `0.23` with unison share |
+
+**It is independent of all eight existing features in both corpora**, which only `rising share`,
+`unison share` and `uneven attacks` had managed. Its spread is `110%` in Bach against `170%` in the
+fifteenth century — a ratio of `0.65`, inside the factor of two that §8.4.10 uses for era-neutrality.
+
+##### And it is the first dial the generator does not start off the end of
+
+This is the finding that matters, and it is the reverse of every other row in §8.4.12's table.
+
+| | Bach | 15th century | generated |
+|---|---|---|---:|
+| motion, per bar, on all 24 WTC subjects | 0.32 – 0.77 | 0.00 – 1.05 | **0.71** |
+| motion, per bar, on the three-voice fixture | | | **1.21** |
+
+On real subjects the generator sits **inside both corpora**. On mean interval it is `2.95` against a
+ceiling of `2.19`, on conjunct share below both floors, on held-in-a-third below both — and on
+motion it is where the music is. **A band on it can therefore push in both directions**, which is
+precisely what interval cannot do and precisely why joy and sadness could never separate: when a
+generator starts above the ceiling, every target is downwards and every mood asks for the same thing.
+
+The two figures above are also [§8.2.9](#829-a-cost-is-attributed-by-timing-it-not-by-explaining-it)'s warning arriving again,
+and both are quoted because one of them would mislead: the `design()` fixture puts motion at `1.21`,
+*above* the ceiling, where twenty-four real subjects put it at `0.71`. A band measured only on the
+fixture would have reported a dial behaving like all the others.
+
+On the fixture, `Mood::Despair` takes motion from `1.21` to `1.03` and **reaches its band** — the
+second mood ever to do so, after pride. It reaches it by coming *down*, because the fixture starts
+above the target; on real subjects the same mood asks the music to move further than it does. That
+is the dial working in both directions, demonstrated in one direction and inferred in the other, and
+the inference is the thing to measure next.
+
+##### What this leaves
+
+The criterion now has **seven moods over six features**, one of which is a change rather than a
+level and is independent of everything else in both centuries. What it does not have is a paragraph
+naming *low* harmonic motion, which is what a second mood on this dial would need to make the
+contrast Mattheson's catalogue cannot supply on interval. §. 77's *lieblichste Führung der Stimme und
+süsseste Klang-Mischung* is the candidate and §8.4.10 read it as dissonance; deciding between the two
+readings needs the print and not this document.
+
+#### 8.4.15 A compass is a range, and the search had been reading it as freedom
+
+`cargo test --release --bin contrapunctus probe_compass -- --ignored --nocapture`
+`cargo test --release --lib probe_span -- --ignored --nocapture`
+
+[§8.4.14](#8414-why-the-band-cannot-reach-and-the-first-dial-the-generator-starts-inside) proved that
+selection cannot fix this generator's baseline — the reach of a criterion grows as a logarithm of
+its sample count, so closing a gap of `0.78` steps would cost about `10⁹` samples a block — and left
+one candidate for moving the draw instead: **the compass, which nobody had swept.** This is that
+sweep, and the answer turned out not to be a narrower compass but a different reading of the one
+there is.
+
+##### The confusion, stated as a number
+
+`Design::compass` is the range a voice occupies **over a whole piece**. `realise::domain` is handed
+it at **every slice**. Those are not the same quantity, and the two corpora say how far apart:
+
+| span, in diatonic steps | whole piece | 4 bars | 2 bars | 1 bar | local / whole |
+|---|---:|---:|---:|---:|---:|
+| Bach, 24 fugues | 14.7 | 8.0 | 6.0 | 5.0 | **34%** |
+| 15th century, 200 pieces | 9.3 | 4.0 | 3.0 | 2.0 | **21%** |
+| generated | 12.0 | 10.0 | 8.0 | 7.0 | **58%** |
+
+A bar is not a fixed number of notes, though, and a window's span grows with how many attacks fall
+in it — Renaissance semibreves put two or three where a fugue subject puts eight. Windowed on
+**attacks** instead, which is also the unit §8.4.14's arithmetic is about:
+
+| span over *k* consecutive attacks | 4 | 8 | 16 | predicted from 8 | actual interval |
+|---|---:|---:|---:|---:|---:|
+| Bach | 3.0 | **5.0** | 7.0 | 1.94 | 1.54 |
+| 15th century | 3.0 | **4.0** | 6.0 | 1.60 | 1.40 |
+| generated, before the bound | 5.0 | **7.0** | 9.0 | 2.62 | **2.72** |
+| generated, under it | 4.0 | 7.0 | 9.0 | 2.62 | **2.14** |
+
+> The last row is [§8.4.17](#8417-the-default-flipped-and-what-moved) and is the diagnosis
+> confirming itself. The measured span barely moves — the bound forbids a run *breaking* early
+> rather than forcing every window narrow, so an eight-note window straddling a break is still
+> seven steps wide, which is the weakness this section records below. What moves is the
+> **relationship**: before, the generator wrote `2.72` against a prediction of `2.62`, so it was
+> a uniform draw over its own window; after, it writes `2.14` against the same `2.62`, which is
+> where both composers sit — below their own predictions. The bound did not merely clip the
+> number, it changed the shape of the distribution underneath it.
+
+Two things fall out, and the second is the finding.
+
+**The two corpora agree and the generator does not.** Five steps against four over eight attacks,
+across two centuries and two media — as era-neutral as anything in §8.4.10 — and the generator two
+steps wider at every window size.
+
+**The generator's melodic interval is exactly what a uniform draw over its own local span predicts.**
+`2.62` predicted against `2.72` written. Both composers fall *below* their predictions — `1.54`
+against `1.94`, `1.40` against `1.60` — so they write lines more compact than a uniform draw in
+their own window, and the generator writes lines that are one. **Nothing was holding it together but
+the width of the box**, and the box was a whole piece wide.
+
+##### The bound, which is the band's mirror
+
+`realise::Problem::reach`, as `(width, notes)`: a run of attacks inside a span of `width` may not be
+broken before `notes` of them have sounded. Equivalently, no `notes` consecutive attacks may travel
+more than `width` steps.
+
+It is the exact dual of [§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways)'s band bound and
+shares its shape down to the registers. The band forbids a run inside a *narrow* span from going on
+too long — a voice standing still. This forbids a run inside a *wide* span from ending too soon — a
+voice wandering. Both carry a counter and the span's two ends as offsets from the voice's current
+pitch; the test moved from the survival of the run to its death.
+
+**It gets its own rungs on the relaxation ladder, and only when it is set.** §8.5.5 is the reason:
+its band bound was put on §8.5.4's rung because the two are the same constraint at two widths, and
+every block that could not meet the harder one dropped the easier one with it and wrote exactly the
+runs the easier one existed to stop. So this inserts two rungs ahead of everything — loosened to the
+corpus's own sixteen-note figure of seven steps, then dropped — and inserts **none** when there is no
+bound, so a piece written without one climbs the ladder §8.5.5 measured, rung for rung, and every
+figure published before this section is reproduced unchanged.
+
+##### What it costs, which is nothing
+
+Five seeds, the three-voice fixture, both arms as §10.2 requires:
+
+| span bound | predicted | interval | diss / 1000 | blocks that needed it relaxed |
+|---|---:|---:|---:|---:|
+| none | — | **2.95** | 68.6 | — |
+| 7 steps / 8 notes | 2.62 | 2.71 | 62.8 | **0** |
+| 5 steps / 8 notes | 1.94 | 2.49 | 75.9 | **0** |
+| 4 steps / 8 notes | 1.60 | 2.21 | 54.0 | **0** |
+| 3 steps / 8 notes | 1.25 | **2.06** | 58.4 | **0** |
+
+**No block at any width ever needed the bound loosened or dropped**, which is the question §8.5.4
+could not answer about its own bound until the interface suite answered it by refusing three whole
+pieces. A width that bought a good interval by climbing the ladder would have bought it from the
+harmonic plan; this buys it from the domain. The search also runs no slower — a narrower domain is a
+smaller layer — though the timings are too noisy to quote, which is this document's standing rule
+about milliseconds.
+
+**And it does what selection could not.** §8.4.14 measured 3 072 samples a block reaching `2.44`;
+this reaches `2.06` with one sample and a smaller search. At four steps the generator lands at
+`2.21` against Bach's ceiling of `2.19` — the first time it has been at the edge of the corpus
+rather than off it.
+
+> **It undershoots its own arithmetic, and the reason is worth stating.** At five steps the formula
+> predicts `1.94` and the bound delivers `2.49`. The bound forbids a run *breaking* too early; it
+> does not force every window to be narrow. A voice may sit inside its span, sound its eight notes,
+> and then leap out — so the realised span across a run boundary is wider than the width, and the
+> prediction assumes uniformity the constrained draw does not have. What the bound is, is weaker
+> than what it was designed from, and the gap between `1.94` and `2.49` is the size of that
+> weakness.
+
+##### And it is what makes the moods separate
+
+This is the result the bound was built for. §8.4.12's joy and sadness are opposite ends of one dial
+and land three hundredths apart, because the generator sits above both their targets and every mood
+therefore asks for the same thing. Bring the baseline down and they should come apart:
+
+| span bound | unbanded | joy asks 2.02 | sadness asks 1.22 | separation |
+|---|---:|---:|---:|---:|
+| none | 2.95 | 2.64 | 2.61 | `+0.030` |
+| 5 steps / 8 notes | 2.49 | 2.28 | 2.22 | `+0.059` |
+| 4 steps / 8 notes | 2.21 | 2.11 | 2.06 | `+0.059` |
+| 3 steps / 8 notes | 2.06 | **2.02** | **1.83** | **`+0.187`** |
+
+**Sixfold.** And the last row is the mechanism showing itself: at three steps the music sits at
+`2.06`, joy's target is `2.02`, and joy therefore lands on its target and *stops pulling* while
+sadness keeps going to `1.83`. That is the first time in three sections that two moods have done
+different things to the same dial, and it happened because the baseline crossed one of their
+targets rather than because anything about the criterion changed.
+
+##### The default stays off, and that is a deferral rather than a verdict
+
+`Layout::span` is `None`. Turning it on changes what the draw draws from and so moves every figure
+this document has published, and re-baselining the whole of §8 is not a thing to do as a side effect
+of a sweep — the same reason [§8.4.9](#849-the-panel-was-judging-the-generator-and-the-composer-differently)
+left the chord clause off on both sides. What the measurement supports is flipping it; what it does
+not support is flipping it in the same commit that measured it. [§9](#9-roadmap) carries it.
+
+##### What this is not
+
+It is not a **per-bar envelope authored on the score**, which is the more general thing and the one an
+interface would draw: a band per voice, varying over the piece, containing the line. This bound needs
+no authoring at all — the corpus supplies its two numbers and it applies everywhere — which is why it
+came first. The envelope is strictly more expressive, because it can say *where* as well as *how
+wide*, and it is the natural home for §8.4.13's register cue, which the systematic literature makes
+one of the few innate ones and which no `affect::Feature` counts. The envelope is also drawable from
+what the search already produces: the running minimum and maximum over the last `notes` attacks is a
+range area under the line, and nothing further is needed to show a reader what the bound is doing.
+
+#### 8.4.16 What the span bound is worth, and the percentile it has to be read off
+
+`cargo test --release --bin contrapunctus probe_span_dials -- --ignored --nocapture`
+
+[§8.4.15](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom) built the local
+span bound, measured it on one three-voice fixture, and left the default off because turning it on
+moves every generated figure this document publishes. That trade cannot be judged until it is
+priced, and priced on **real subjects** — [§8.2.9](#829-a-cost-is-attributed-by-timing-it-not-by-explaining-it)'s
+rule, and §8.4.14 caught the fixture misreporting a dial by a factor it would have been easy to
+believe.
+
+##### What it is worth
+
+Every feature §8.4.10 counts, on fugues generated from all 24 WTC subjects, against the **union** of
+the two corpus ranges:
+
+| span bound | interval | conjunct | rising | held | unison | motion | outside | refuses of Bach |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| none | **2.678** ✗ | 0.450 | 0.487 | 0.109 | 0.071 | 0.731 | **1** | — |
+| 8 steps / 8 notes | 2.498 ✗ | 0.487 | 0.493 | 0.131 | 0.067 | 0.705 | 1 | 6% |
+| 7 steps / 8 notes | 2.427 ✗ | 0.498 | 0.488 | 0.136 | 0.062 | 0.671 | 1 | 12% |
+| **6 steps / 8 notes** | **2.120** | 0.547 | 0.488 | 0.163 | 0.055 | 0.682 | **0** | **22%** |
+| 5 steps / 8 notes | 2.065 | 0.562 | 0.493 | 0.176 | 0.050 | 0.671 | 0 | 37% |
+| 4 steps / 8 notes | 1.860 | 0.604 | 0.492 | 0.205 | 0.046 | 0.650 | 0 | 56% |
+
+**One bound moves all three dials §8.4.12 complained about**, which is the answer to whether they
+were one fault or three. Interval comes inside the corpus; conjunct share rises off Bach's floor from
+`0.450` to `0.547`; held-in-a-third rises off it from `0.109` to `0.163`. §8.4.12 reported those
+three as "off the end, all in the same direction" against each corpus separately — against the union
+only interval is outside, which is the same music counted against a wider ruler. Either way they move
+together and they move because one thing was wrong with all of them.
+
+**And `rising share` does not move**: `0.487` to `0.488`. That is the dial §8.4.10 found independent
+of every other in both corpora, and a bound on local width has no business touching it. It doesn't.
+A change that moved everything would have been a change that proved nothing.
+
+##### The percentile is the interesting part, and it is a known result arriving a third time
+
+A bound has to be read off a percentile, not a median, or it refuses half of what the composer wrote.
+§8.5.4 read its run bound off Bach's **ninety-fifth**, precisely so that it could refuse nothing he
+wrote. The same discipline here gives:
+
+| span over eight attacks | median | 75th | 90th | 95th |
+|---|---:|---:|---:|---:|
+| Bach | 5.0 | **6.0** | 7.0 | 8.0 |
+| 15th century | 4.0 | 5.0 | 7.0 | 7.0 |
+| generated | 7.0 | 9.0 | 10.0 | 11.0 |
+
+**The ninety-fifth percentile is eight, and eight does almost nothing** — it leaves the generator
+outside the corpus on mean interval, because the generator's own *median* span is seven, which is
+below Bach's own ceiling. A bound that cannot refuse anything the composer wrote also cannot refuse
+much of what this generator writes.
+
+That is [§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways)'s finding for the third time, and
+it is worth stating plainly because it is the shape of the whole problem: *a uniform draw held to a
+composer's own limits does not have that composer's shape, because he was not drawing uniformly.*
+§8.5.5 measured it on standing still — four notes in a two-step band reproduces his rate while
+refusing an eighth of his writing. This measures it on ranging — six steps over eight notes puts the
+generator inside the corpus while refusing 22% of Bach's own windows. The bound that *describes* him
+and the bound that *repairs a uniform draw* are different numbers, and the gap between them is
+exactly the part of composition that is choosing rather than sampling.
+
+##### Six steps over eight notes, which is his upper quartile
+
+It is the first width at which the generator is inside the corpus on **every** dial, and the cheapest
+such width in what it costs the composer. The percentile is chosen rather than inherited, and the
+choice is the measurement above: the ninety-fifth does not work, and the median costs 37%.
+
+##### The interface opts in; the library does not
+
+`Layout::span` stays `None` in `Layout::default()`, and `ui/`'s `App` sets `Some((6, 8))`.
+
+The two have opposite obligations and this is the first field where that has mattered enough to
+split them. The library's default governs every figure in §8, and re-baselining those is not a side
+effect of a default — the same reason §8.4.9 left the chord clause off on both sides rather than
+moving §8.1.2's stratification table in a panel repair. An interface has no figures to protect and a
+listener to answer to, so it opts in, and a saved file records the bound like any other `Layout`
+field, so §8's own reproducibility promise is kept from both directions.
+
+It is a control rather than a constant there: a checkbox and a width from three to ten steps, with
+Bach's quartiles and the refusal rate printed beside it, because a slider with no idea which part of
+it is music is a slider nobody can set. That is the same argument `Layout::fullness`'s range label
+makes one control above it.
+
+##### And then it was done
+
+[§8.4.17](#8417-the-default-flipped-and-what-moved) flips the library default to `Some((6, 8))` and
+re-measures §8's generated figures against it. What this section priced — `2.678` to `2.120` on the
+headline dial, 22% of Bach's own windows refused — is what it cost.
+
+#### 8.4.17 The default flipped, and what moved
+
+`cargo test --release --bin contrapunctus probe_span_dials -- --ignored --nocapture`
+
+[§8.4.16](#8416-what-the-span-bound-is-worth-and-the-percentile-it-has-to-be-read-off) priced the
+local span bound and did not pay: `Layout::span` stayed `None`, because turning it on moves every
+generated figure in §8. This pays it. `Layout::default()` is now `Some((6, 8))` — six diatonic steps
+over eight consecutive attacks, Bach's own upper quartile — and the figures below are re-measured
+against it.
+
+##### What moved, on all 24 WTC subjects
+
+| | corpus, Bach | corpus, 15th c. | before | after | |
+|---|---|---|---:|---:|---|
+| mean interval, steps | 1.22 – 2.19 | 1.05 – 1.85 | 2.72 | **2.14** | off the end of both → inside Bach |
+| conjunct share | 0.44 – 0.87 | 0.58 – 0.88 | 0.45 | **0.56** | off Bach's floor to his middle |
+| held in a third | 0.10 – 0.43 | 0.14 – 0.48 | 0.11 | **0.18** | off the end of one → **inside both** |
+| hard firings per 1000 | 30.2 – 231.8 | 0.0 – 116.5 | 61.2 | **74.2** | inside both, now at Bach's median |
+| unison share | 0.00 – 0.09 | 0.00 – 0.54 | 0.07 | 0.06 | inside both |
+| motion, per bar | 0.32 – 0.77 | 0.00 – 1.05 | 0.71 | 0.70 | inside both |
+| rising share | 0.41 – 0.55 | 0.38 – 0.52 | 0.49 | 0.50 | **unmoved, and should be** |
+| uneven attacks | 0.55 – 2.29 | 0.34 – 3.83 | 1.02 | 1.02 | **unmoved, and cannot move** |
+
+**Nothing is off the end of both corpora any more.** One bound moved the three dials §8.4.12
+complained about, which settles the question that section left open: they were one fault, not three.
+
+**The two that did not move are the control.** `rising share` is the dial §8.4.10 found independent
+of every other feature in both corpora, so a bound on local width has no business touching it, and
+it does not — `0.49` to `0.50`. `uneven attacks` is rhythmic, and §2.6 puts rhythm past anything the
+search can reach; it is identical to three decimal places. A change that had moved everything would
+have proved nothing about what it was supposed to be doing.
+
+**The rule rate rose, and the reading is not the obvious one.** Hard firings went from `61.2` to
+`74.2` per thousand slices, which is more violations and looks like a cost. Bach's own median across
+the 24 fugues is `74.73`. So the generator moved from comfortably below the composer to sitting on
+him, which is what this document asks of every other figure it compares — [§8.1.5](#815-the-dissonance-rules-need-a-metre-the-automaton-lacked)
+and [§8.7.6](#876-the-generator-against-the-book) both read a rate against Bach's rather
+than against zero. A generator that breaks fewer rules than Bach is not thereby better than Bach.
+
+##### And it does what it was built to do
+
+The moods, on real subjects rather than on `design()`:
+
+| span bound | unbanded | joy asks 2.02 | sadness asks 1.22 | separation |
+|---|---:|---:|---:|---:|
+| none | 2.678 | 2.369 | 2.295 | `+0.075` |
+| 8 steps / 8 notes | 2.498 | 2.307 | 2.164 | `+0.143` |
+| **6 steps / 8 notes** | **2.120** | **2.101** | **1.859** | **`+0.241`** |
+| 5 steps / 8 notes | 2.065 | 2.083 | 1.835 | `+0.248` |
+
+**Three times the separation at the chosen width**, and the last two rows are the mechanism §8.4.15
+predicted showing itself: the baseline arrives beside joy's target, so joy lands on it and *stops
+pulling* — `2.101` against an unbanded `2.120` — while sadness keeps going to `1.859`. Two moods
+doing different things to one dial, which is what §8.4.12 could not get at any sample count.
+
+> **The fixture says the opposite, and that is the third time.** On `design()` the same flip takes
+> the joy-and-sadness gap from `0.030` to `0.014` — no improvement at all — because that fixture's
+> baseline sits at `2.633`, still well above joy's target, where the 24 real subjects sit at `2.14`,
+> beside it. [§8.2.9](#829-a-cost-is-attributed-by-timing-it-not-by-explaining-it)'s rule has now
+> caught three separate claims in this section alone, and the one it would have caught here is the
+> headline one.
+
+##### What did not need re-measuring, and why that is worth saying
+
+`probe_rhetoric`'s breath figures are identical — 524 stretches, median `6.5` beats, longest `72.0`
+— and so is the rhythmic foot at `0.51`. Both are rhythm, and §2.6 makes rhythm a given. A bound on
+pitch that had moved them would have meant something was wrong with the bound rather than something
+right with the music, so these two rows are a check and not a result.
+
+The reconstruction figures of §8.4.3 and the search costs of §8.2 and §8.3 are untouched for a
+different reason: they build `realise::Problem` directly rather than going through a `Layout`, and
+every one of those literals carries `reach: None`. The flip reaches the **generator** and nothing
+else, which is what keeps the search measurements comparable across it.
+
+##### What it costs, and the cost is the rule this document keeps relearning
+
+**The draw found the next-cheapest way to do what was banned.** `probe_run` runs both arms, and the
+span bound raises the rate of a voice repeating its own pitch at every voice count, with the run
+bound on or off:
+
+| voices | run bound | span off | span 6/8 |
+|---|---|---:|---:|
+| 3 | none | 10% | **15%** |
+| 3 | three | 4% | **7%** |
+| 4 | three | 4% | **8%** |
+| 5 | three | 6% | **10%** |
+| 6 | three | 7% | **12%** |
+
+Bach's own rate is `3.9%`. Before the flip the bounded generator sat on it; after, it is at roughly
+twice that at three voices and three times at six. [§8.5.4](#854-bound-the-run-and-the-width-cap-pays-for-it)'s
+run bound and [§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways)'s band bound **do not
+absorb it** — they are on in every "three" row above and the rise happens anyway.
+
+This is the rule this document has now written down three times and been caught by a fourth: *a
+bound removes the thing it names and nothing else, and a uniform draw over the remaining legal set
+finds the next-cheapest way of doing what was just banned.* §8.5.4 stopped a voice striking one
+pitch four times and it began shuffling inside a two-step band; §8.5.5 stopped that and this section
+narrowed where a voice may go at all, so the draw took the one move that is always legal. Narrowing
+a domain moves the mass of a uniform draw, and repetition is where the mass goes.
+
+> **What is not let back in is the part §8.5.4 and §8.5.5 exist to stop.** The *longest* run is
+> unchanged at two or three notes, and the share of eight-note windows spanning two steps or less
+> stays at `0.0%` against Bach's `3.9%`. The two bounds hold their tails exactly as before; what
+> rises is the plain rate of one note repeating once. That is a milder defect than either of the
+> ones they were written for, and it is still a doubling.
+
+`22%` of Bach's own eight-attack windows would be refused by a bound of six steps — §8.4.16 measures
+that and it does not change here. The generator writes inside the corpus by writing lines the
+composer would sometimes not have written, which is §8.5.5's finding stated once more and now paid
+for rather than only recorded: *a uniform draw held to a composer's own limits does not have his
+shape.* Six steps is the width at which the draw's shape matches; eight is the width at which the
+composer's own writing all survives; they are not the same number and this document has now chosen
+between them, in favour of the music that comes out.
 
 ### 8.5 Standing still: texture, repetition, and the bounds the book supplies
 
@@ -5283,6 +6023,13 @@ On one of Bach's own subjects, both arms back to back in one process:
 | 6 | none | 10% | **4** | — | 1 |
 | 6 | **3** | 4% | **3** | 0 | 0 |
 | **Bach, 24 fugues** | | **3.9%** | 6 | | |
+
+> **Measured before [§8.4.17](#8417-the-default-flipped-and-what-moved) flipped `Layout::span` on**,
+> and that flip moves this table: bounding how far a voice may range locally raises the repeated-pair
+> rate by three to five points at every voice count, because a narrower domain leaves the draw fewer
+> moves and repeating is the one that is always legal. §8.4.17 runs both arms and prints them. The
+> *longest run* column and §8.5.5's two-step-band figure are unmoved — the bounds below still hold
+> their tails — so what the flip costs is the base rate and not the defect these bounds exist for.
 
 The two right-hand columns are the ones a reader should check before believing the two on the left. **One block of a
 four-voice piece has to lift the bound** and none of the rest of any piece does — the ladder's first rung, below —
@@ -8078,7 +8825,7 @@ report; and **`par::map` over the drivers** ([§8.2.7](#827-the-drivers-were-alr
 pure engineering and still returned a finding — the drivers were already parallel one level down, and the two
 nested were three times slower than either alone.
 
-#### The central problem: a criterion that selects
+### 9.1 The central problem: a criterion that selects
 
 Everything downstream of [§8.2.1](#821-realisation-stops-at-two-free-voices) generates legal music that nothing prefers.
 `10¹²` to `10¹⁸` legal fills of a three-bar span, and agreement with Bach that does not respond to anything the
@@ -8125,7 +8872,7 @@ default it started as. One caveat is built into that constructor rather than lef
 dropped *by drawing*, not by zeroing the weights, because to a shortest path "no objective" means every path ties
 and the first one found wins, which scores `1.3%` against the tier's `6.1%`.
 
-#### The other gap: which affect the music has, and what in the texture puts it there
+### 9.2 The other gap: which affect the music has, and what in the texture puts it there
 
 [§8.9.6](#896-where-the-voice-count-stops-being-a-keyboard-piece) closed a gap of this kind by taking a table out of
 somebody else's paper and transcribing it whole — *"the same kind of object as a rule out of Fux: an explicit claim
@@ -8173,7 +8920,11 @@ an unflattering reason: **the tables disagree with each other**. That is a predi
 repertoire-specific, and [§8.1.2](#812-two-corpora-stratify-the-rulebook) is the instrument this project already
 has for deciding such a thing.
 
-**Systematic, and a different kind of claim.** Kate Hevner's *"Experimental studies of the elements of expression in
+**Systematic, and a different kind of claim.** [§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong) is
+what this branch turned out to be worth: of 166 verified claims out of the survey article, **102 are not about
+the music at all**, four are both measurable here and turnable by the search, and the most useful thing in it is
+a criticism rather than a prescription — that the carrier of affect is a *change against what came before* and
+every feature in `affect::Feature` is a level. Kate Hevner's *"Experimental studies of the elements of expression in
 music"* (*American Journal of Psychology* 48, 1936) is the first systematic treatment — eight groups of adjectives
 around a circle, and six parameters varied against them: mode, tempo, pitch, rhythm, harmony and melody. Gabrielsson
 and Lindström's *"The Role of Structure in the Musical Expression of Emotions"* (in the Oxford *Handbook of Music
@@ -8199,11 +8950,14 @@ bar than either corpus does.
 > **Mattheson has now been read in both halves** — the affect catalogue in [§8.4.10](#8410-mattheson-transcribed-and-the-generator-off-the-end-of-three-of-his-eight-dials),
 > and the *Klang-Rede*, the breath and the rhythmic feet in [§8.4.11](#8411-the-breath-the-disposition-and-the-foot-the-first-mattheson-claim-to-fail-by-measurement).
 > **Herremans and Chew has been read and built**: `experiments::spiral` is the spiral array, and §8.4.11 runs
-> their three measures over both corpora. Lerdahl and Krumhansl, Bartel, Steblin, Hevner, and Gabrielsson and
-> Lindström remain unread, and none of these is in [`literature/`](literature/). §7's table still takes no row:
-> it claims every DOI in it was resolved, a 1739 print has none, and the conference preprint reached for the
-> spiral array carries none either — so both are cited where they can be checked instead, by page and by
-> figure number.
+> their three measures over both corpora. **The systematic literature has been surveyed but not read at the
+> source**: [§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong) takes the general theory through the
+> article that maps it, which is enough to place the field and not enough to transcribe from — and that section
+> reports what the survey gets wrong about its own citations. Lerdahl and Krumhansl, Bartel, Steblin, Hevner, and
+> Gabrielsson and Lindström remain unread at the source, and none of these is in
+> [`literature/`](literature/). §7's table still takes no row: it claims every DOI in it was resolved, a 1739
+> print has none, and the conference preprint reached for the spiral array carries none either — so both are
+> cited where they can be checked instead, by page and by figure number.
 
 ##### Most of the vocabulary is already measured
 
@@ -8253,10 +9007,11 @@ made for harmony and for the same reason.
 `cargo test --release --lib probe_firings -- --ignored --nocapture`
 
 > Superseded by [§8.4.10](#8410-mattheson-transcribed-and-the-generator-off-the-end-of-three-of-his-eight-dials), which runs the same
-> measurement over all 24 subjects instead of one and puts it beside the corpora: the generated median is `2.72`
-> against a Bach range of `1.22`–`2.19` and a fifteenth-century range of `1.05`–`1.85`. **The generator is off the
-> end of both.** The table below is the single-piece version and is kept because it is the one that was already
-> there to be read.
+> measurement over all 24 subjects instead of one and puts it beside the corpora. When that section was written
+> the generated median was `2.72` against a Bach range of `1.22`–`2.19` and a fifteenth-century range of
+> `1.05`–`1.85` — **off the end of both** — and [§8.4.17](#8417-the-default-flipped-and-what-moved) brings
+> it to `2.14`, inside Bach. The table below is the single-piece version, measured before either, and is kept
+> because it is the one that was already there to be read.
 
 Mattheson's joy-and-sadness axis is the mean melodic interval, which this project has printed for years without
 reading it as anything but a diagnostic. On the generator's own default piece rather than on the reconstruction
@@ -8286,7 +9041,7 @@ one corpus as in the other. Most of what the *Affektenlehre* a program can evalu
 era-neutral is how many independent dials it amounts to — five of the twenty-eight feature pairs move together in
 Bach against two in the fifteenth century — and that is a finding about the fugue, not about the doctrine.
 
-#### Harmony, scheduled per beat
+### 9.3 Harmony, scheduled per beat
 
 The only lever measured that moves more than a point in the same direction in both centuries is a **correct
 harmonic plan** — `+2.36` in Bach and `+3.74` in the Renaissance. It is a ceiling rather than a candidate: neither
@@ -8298,7 +9053,7 @@ has to infer the harmony because it decides it. §8.4.2 hands that a quantitativ
 coarsening to a **beat** and not to a **bar**, so a form grammar has to schedule harmony per beat. A chord per bar
 loses more than half of what a correct plan is worth.
 
-#### Then
+### 9.4 Two smaller shapes, waiting on the same thing
 
 **Double fugue** — two shapes that must tile, which is where the shape-catalogue reading earns its keep.
 
@@ -8306,10 +9061,10 @@ loses more than half of what a correct plan is worth.
 made the stretto as dense as the rulebook allows and measured what that costs: on §8.7.3's own subject, moving the
 second entry from six quarters to four is about eight violations a piece, for two statements either way. The search
 maximises statements because that is the only thing it can count; nothing in the project can say whether a tighter
-stretto at that price is the better piece. It is [the central problem](#open-problems-in-rough-order-of-how-much-they-block)
+stretto at that price is the better piece. It is [the central problem](#91-the-central-problem-a-criterion-that-selects)
 in miniature, on a case small enough to measure exactly, and that is what makes it worth keeping here.
 
-### Open problems, in rough order of how much they block
+### 9.5 Open problems, in rough order of how much they block
 
 - **Which affect the music has, and what in the texture puts it there**, above. The
   *Affektenlehre* is an explicit, prescriptive, four-century-old answer written by people in this
@@ -8335,13 +9090,27 @@ in miniature, on a case small enough to measure exactly, and that is what makes 
   it. And §8.4.3 shows that hitting the statistic is not writing the music — `soft(6)` matched
   Bach's mean interval and compass and scored *below* a draw that missed both.
 
+  **One dial now behaves.** [§8.4.14](#8414-why-the-band-cannot-reach-and-the-first-dial-the-generator-starts-inside) added
+  `Feature::Motion` — how far the harmony's centre of effect travels from bar to bar, which is a *change*
+  rather than a level and is the shape §8.4.13 found the systematic literature asking for six times over. It is
+  independent of all eight of §8.4.10's features in both corpora, its spread is era-neutral, and the generator
+  sits **inside** both corpora on it. That last is what none of the others manage, and it is the difference
+  between a control and a decoration: a band can push a dial in two directions only when the music starts
+  between its ends.
+
   **What is left is the hard half, and the reading sharpened it rather than closing it.** On §. 56's
-  axis the generator's median over all 24 subjects is **2.72** against a Bach range of `1.22`–`2.19`
-  and a fifteenth-century range of `1.05`–`1.85`; on §. 57's it is at Bach's floor; on §. 74's it is
+  axis the generator's median over all 24 subjects was **2.72** against a Bach range of `1.22`–`2.19`
+  and a fifteenth-century range of `1.05`–`1.85`; on §. 57's it was at Bach's floor; on §. 74's it was
   below both corpora outright. Three of eight features off the end, all in the same direction —
-  which on the doctrine's own terms is not eight dials set badly but **one dial pushed to its stop**. The
-  item is now to give the grammar a band per section on features that have been transcribed, and the
-  band's shape is the thing still missing.
+  which on the doctrine's own terms was not eight dials set badly but **one dial pushed to its stop**.
+
+  **That reading turned out to be exactly right, and it was one fault.**
+  [§8.4.17](#8417-the-default-flipped-and-what-moved) flips a bound on how far a voice may travel
+  locally, and all three move together: interval to `2.14`, conjunct share to `0.56`, held-in-a-third
+  to `0.18`, with **nothing off the end of both corpora any more**. The two dials that do not move
+  are the two that should not — `rising share`, independent of every other in both corpora, and
+  `uneven attacks`, which is rhythmic and so past what §2.6 lets the search touch. What is left of
+  this item is the band's *shape*: a target per section rather than one held over a whole piece.
 
 - **A criterion that selects**, above. It is the central problem of the project, and
   [§8.5.3](#853-a-voice-repeats-itself-and-it-is-the-draw-rather-than-a-defect) is the sharpest instance of it yet measured: the objectiveless draw repeats a pitch
@@ -8365,6 +9134,31 @@ in miniature, on a case small enough to measure exactly, and that is what makes 
   measure is **tighter than the composer himself** — six notes in a two-step band gives `5.8%` against his `3.9%`,
   and four gives `3.5%` while refusing about an eighth of his own writing. A uniform draw held to his limits does
   not have his shape, which is this item in one sentence and is why no ceiling closes it.
+
+  **A criterion now exists and [§8.4.14](#8414-why-the-band-cannot-reach-and-the-first-dial-the-generator-starts-inside) says what it
+  cannot do.** [§8.4.12](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)
+  built one that selects among uniform draws — a band, never a direction — and it works mechanically and moves
+  the music very little where the draw is aimed elsewhere. The arithmetic is now measured: **the reach of a
+  selection criterion grows as a logarithm of the sample count** — about `0.10` steps of mean interval per
+  fourfold multiplication early and `0.055` late — so closing a gap of `0.78` steps would cost on the order of
+  `10⁹` samples a block. Selection cannot repair a draw aimed somewhere else, and the item's remaining half is
+  therefore **the draw itself**. Of the three ways to move it, two are already measured and refused — the
+  Boltzmann tilt is repertoire-specific (§8.2.1), and optimising a positive criterion has a degenerate optimum
+  (§8.4.3) — and the third, the **compass**, is a `Design` field nobody has swept. That sweep is the cheapest
+  open experiment on this list.
+
+  **Swept, and it was the right place to look** — [§8.4.15](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom).
+  The answer was not a narrower compass but a different reading of the one there is: `Design::compass` is the
+  range a voice occupies over a whole *piece*, and `realise::domain` was handed it at every *slice*. Over eight
+  consecutive attacks a voice spans **5 steps in Bach and 4 in the fifteenth century** against whole-piece
+  compasses of 14.7 and 9.3; this generator spans 7, and its melodic interval is exactly what a uniform draw over
+  that width predicts. `Problem::reach` bounds the local span, costs nothing — **no block at any width needed it
+  loosened or dropped** — and takes the mean interval from `2.95` to `2.06` where 3 072 samples of selection
+  reached only `2.44`. It also widens the joy-and-sadness separation sixfold, which is the first thing that has.
+
+  **What is left of this item after that** is the same shape one level down: the bound narrows the domain without
+  preferring anything inside it, so nothing is *selected* and §8.4.3 is untouched. It is a better draw, not a
+  criterion. The criterion half of the item stands exactly where it did.
 - **The harmonic plan is analysed from one voice, and the obligation does not cross a block
   edge.** [§8.4.8](#848-where-the-extra-firings-come-from) names both by taking a panel rise apart.
   `compose::plan` runs `analyse_viterbi` on `d.subject` alone, and a four-note chord explains
@@ -8465,6 +9259,41 @@ in miniature, on a case small enough to measure exactly, and that is what makes 
   changed. What remains under this heading is still the musical question — and one measured fact beside it: any
   bound on a voice standing still costs the fullest texture about two thirds of its share, and the size of that
   bound then costs nothing further.
+- **The span bound doubled the repeat rate, and nothing absorbs it.**
+  [§8.4.17](#8417-the-default-flipped-and-what-moved) flipped `Layout::span` on and brought the generator
+  inside both corpora on every dial there is. It also took the rate at which a voice repeats its own
+  pitch from `4%` to `7%` at three voices and from `7%` to `12%` at six, against Bach's `3.9%` —
+  with [§8.5.4](#854-bound-the-run-and-the-width-cap-pays-for-it)'s run bound and
+  [§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways)'s band bound already on. They hold
+  their tails: the longest run and the two-step-band share do not move. What rises is the base rate.
+
+  **This is the third displacement in the same family and the pattern is now unmistakable.** §8.5.4
+  banned striking one pitch four times, and the line began shuffling in a two-step band. §8.5.5
+  banned that, and §8.4.15 narrowed where a voice may go at all — so the draw took the one move that
+  is always available. Each bound removes what it names; a uniform draw redistributes onto whatever
+  is left cheapest; repetition is the floor of that process because it is never illegal.
+
+  What that suggests, and what nothing here has measured, is that the answer is not a fourth bound.
+  Three have each moved the defect one step sideways. The thing none of them touches is that the
+  draw is **uniform over a legal set** rather than shaped like a line — which is
+  [§8.5.3](#853-a-voice-repeats-itself-and-it-is-the-draw-rather-than-a-defect)'s finding and the
+  central item above, arriving from a fourth direction.
+
+- **An authored envelope, rather than a derived bound.**
+  [§8.4.15](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom) bounds how far a voice may range
+  locally and does it with two corpus-supplied numbers that apply everywhere. The more general thing is a band
+  per voice **drawn against the score** and varying over the piece — one that can say *where* as well as *how
+  wide*. Three things recommend it. It is the natural home for the **register** cue, which
+  [§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong) found the systematic
+  literature calling one of the few innate, cross-culturally universal ones and which no `affect::Feature`
+  counts. It is already drawable from what the search produces — the running minimum and maximum over the last
+  `notes` attacks is a range area under the line. And `affect::Curve` is already the right type for it: control
+  points, three joins, positions as fractions of the piece.
+
+  What it needs that the bound did not is a **source for the envelope itself**. A bound takes two numbers from
+  the corpora; an envelope is a shape per voice per piece, and nothing here says where that shape comes from
+  when nobody draws one. That is the open question, and it is the same one §9's texture item asks in another
+  costume.
 - **Where a second rhythm comes from, beyond augmentation and diminution.**
   [§8.7.5](#875-where-a-second-rhythm-comes-from) found one source already in the repository. A countersubject with
   a rhythm of its own is what a fugue actually has, and this project cannot yet say where that comes from —
@@ -8567,6 +9396,91 @@ in miniature, on a case small enough to measure exactly, and that is what makes 
 - **The Shostakovich half of the ground truth**, which needs Marques' MIDI rather than kern.
 
 ---
+
+### 9.6 A possible experiment: giving the criterion something to say about harmony
+
+[§8.4.13](#8413-the-systematic-literature-and-what-it-says-this-design-has-wrong) read the
+systematic literature and found that of the five rows in its structural-feature table, **harmony is
+the only one still live here** — tempo and articulation are [§2.6](#26-what-is-not-a-variable-rhythm)'s,
+loudness is not in the model at all, and mode was measured in §8.4.10 and failed the two-corpus
+test. It is also the row with the most behind it: *resolving harmonies give tension and release,
+unexpected harmonies give surprise*, with Daikoku's operationalisation — the surprise of a
+progression's last chord against the previous three — a contrast **within the score** rather than a
+quantity in a listener.
+
+And [§8.4.12](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)'s
+criterion cannot touch it. `realise::Problem::plan` is an *input*; `compose::Run` builds it once and
+hands the same one to every `fill_block`; so every candidate `Plan::charge` ranks was drawn under a
+single harmonic plan. The criterion is as blind to harmony as it is to rhythm, and for a different
+reason.
+
+##### First, the fact that reframes the question
+
+Harmony is not merely upstream of the criterion. **It is barely a variable at all.** `compose::plan`
+is a pure function of the design and the blocks — no seed, no alternatives — and its own doc says
+why there is nothing to choose among: *every chord it names is the subject's own analysis
+transposed, and that carries its quality with it*. The chords come from
+`harmony::analyse_viterbi(subject)`, which the input fixes, transposed by `Block::key_of`.
+
+So the harmonic plan has **one degree of freedom: the key walk**, which is `Layout::middles`.
+Everything else follows from the subject. Wiring the affect band into `compose::plan` today would
+hand it one thing to vary.
+
+##### Step 0, which could retire the rest
+
+`Feature::Motion` is computed from **sounding pitches**, so voicing already moves it under a fixed
+plan. Nobody has measured how much. The experiment is to decompose the variance of cloud momentum
+into the part the key walk moves and the part the voicing moves, and it is one probe:
+
+- hold `Layout::middles` and generate many fills — that spread is what the criterion **already**
+  reaches;
+- vary `middles` across the legal walks and generate again — that spread is what plan-level search
+  would add.
+
+If the first dominates, the criterion already gets most of what there is and everything below is not
+worth building. That is the smallest measurement that could refute the whole line, and this document
+asks for one before the work rather than after it.
+
+##### Then, in order of what each needs before it
+
+**Give harmony degrees of freedom it does not have.** Chord substitution, harmonic rhythm, cadence
+placement. Each is a *new rule*, and [§0](#0-where-this-comes-from)'s constraint means each needs a
+transcribed source rather than an invention. §8.4.13 supplies a source for **what to measure** and
+none for **what chords are permitted instead**, and that asymmetry is the real blocker.
+
+**Draw plans the way notes are drawn.** Two shapes, and the cheap one is available now:
+
+- **Draw the key walk.** `Layout::middles` is already the field, [§2.4](#24-form-is-a-grammar)'s
+  bounded walk on the circle of fifths is already the grammar, `form::parse` already judges a plan
+  against it, and [§8.7.2](#872-does-the-form-grammar-derive-the-book) measured Bach's median at three
+  middles with a range of nought to nine. Enumerate the legal walks of that length, fill each, and
+  band-select. It costs *k* whole generates a piece and needs no new theory. There is a precedent one
+  level down: `Texture::Drawn` draws a rest pattern with probability proportional to how much music
+  each admits, which is this move at block scale.
+- **Count and sample plans exactly** — a `realise::fill` for harmony. Most of the parts are built:
+  `harmony::analyse_viterbi` is already a dynamic program over chords, `form::parse` is the legality
+  checker, and `Problem::plan = vec![]` is already the control arm showing what the contrapuntal
+  rules alone permit. What is missing is the **count** and the **uniform sample**. It only pays after
+  the paragraph above, because otherwise there is almost nothing to count.
+
+**Rejected, and on this document's own numbers.** Putting the chord in the search's state multiplies
+each layer by the chords alive at that slice. [§8.2.5](#825-restrict-a-layer-instead-of-refusing-it)
+already made `legal_fills` a lower bound, and [§8.3.9](#839-the-bracket-is-widest-exactly-where-the-draw-needs-it)'s reading of
+it is that the error grows with the density — `pick_pattern` is the one place two such counts are
+compared, and this would make the truncation worse exactly there.
+
+##### Three traps, each of which this document has already walked into
+
+- [§8.9.5](#895-the-two-instruments-disagree-about-what-is-legal) made the plan an **obligation the fill must
+  satisfy**. Change the plan and you change what is feasible, and a constraint that makes something
+  infeasible is invisible to a table of what succeeded — the `ui/` suite is the only thing that has
+  ever caught one.
+- [§8.4.17](#8417-the-default-flipped-and-what-moved) is the fourth time a bound has pushed the draw
+  onto the next-cheapest thing. A band on harmony needs the same neighbourhood measured before it is
+  believed.
+- [§8.4.3](#843-every-positive-criterion-has-a-degenerate-optimum) is why this has to stay *draw
+  uniformly, then band*. A criterion that picks chords directly has a cheapest way to be satisfied,
+  and that finding is five times over.
 
 ## 10. Reproducing the results
 
