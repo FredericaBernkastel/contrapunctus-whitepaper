@@ -103,6 +103,7 @@ legal fills, is [§9](#9-roadmap). How this was reached, and what did not surviv
     - [8.3.7 Gauss–Jordan would fix the right thing and still not be worth writing](#837-gaussjordan-would-fix-the-right-thing-and-still-not-be-worth-writing)
     - [8.3.8 A merge operator, and an upper bound to set against the lower one](#838-a-merge-operator-and-an-upper-bound-to-set-against-the-lower-one)
     - [8.3.9 The bracket is widest exactly where the draw needs it](#839-the-bracket-is-widest-exactly-where-the-draw-needs-it)
+    - [8.3.10 The diagram is a ramp, and the widest layer is nowhere near the start](#8310-the-diagram-is-a-ramp-and-the-widest-layer-is-nowhere-near-the-start)
   - [8.4 Nothing prefers one legal fill to another](#84-nothing-prefers-one-legal-fill-to-another)
     - [8.4.1 Every step-6 failure is a deficiency, not an excess](#841-every-step-6-failure-is-a-deficiency-not-an-excess)
     - [8.4.2 A better harmonic plan is the first lever worth more than a point](#842-a-better-harmonic-plan-is-the-first-lever-worth-more-than-a-point)
@@ -147,7 +148,7 @@ legal fills, is [§9](#9-roadmap). How this was reached, and what did not surviv
     - [8.8.3 Two faults of register](#883-two-faults-of-register)
     - [8.8.4 Two subjects at once expose a pair nothing judged](#884-two-subjects-at-once-expose-a-pair-nothing-judged)
     - [8.8.5 Three things a placed voice is not](#885-three-things-a-placed-voice-is-not)
-    - [8.8.6 Choosing the clique arbitrarily cost forty-five per cent](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent)
+    - [8.8.6 Choosing the clique arbitrarily cost forty-five statements](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements)
     - [8.8.7 The register is part of the search, not a correction applied after it](#887-the-register-is-part-of-the-search-not-a-correction-applied-after-it)
     - [8.8.8 Which subject carries six voices, and it is not the one everybody would name](#888-which-subject-carries-six-voices-and-it-is-not-the-one-everybody-would-name)
   - [8.9 Past the wall: a solver, six voices, and two hands](#89-past-the-wall-a-solver-six-voices-and-two-hands)
@@ -489,15 +490,39 @@ The ladder drops the generator's own convenience before it drops §2.3's obligat
 also what keeps the search tractable:
 
 ```math
-\mathrm{fill}^{\star}(\Pi)=
-\begin{cases}
-\mathrm{fill}(\Pi) & \text{if it succeeds}\\
-\mathrm{fill}(\Pi\setminus\mathrm{join}) & \text{else if it succeeds}\\
-\mathrm{fill}(\Pi\setminus\lbrace \mathrm{join},\pi\rbrace ) & \text{otherwise}
-\end{cases}
+\mathrm{fill}^{\star}(\Pi)=\mathrm{fill}\big(\Pi\setminus R_{k}\big),
+\qquad k=\min\lbrace j\ :\ \mathrm{fill}(\Pi\setminus R_{j})\ \text{succeeds}\rbrace
 ```
 
-and records which rung it landed on, per block, as `cold` and `without_plan`.
+where $\emptyset=R_0\subsetneq R_1\subsetneq\cdots\subsetneq R_6$ is a fixed chain, each rung dropping everything
+the rung above it dropped and one thing more:
+
+| rung | what $R_j$ drops | reported as |
+|---:|---|---|
+| 0 | nothing | — |
+| 1 | the local span loosens to the corpus's seven steps | `without_reach` |
+| 2 | the local span goes | `without_reach` |
+| 3 | the band loosens to the book's longest | `without_band` |
+| 4 | the band and the run bound both go | `without_run` |
+| 5 | the join to the previous block | `without_prior`, `cold` |
+| 6 | the harmonic plan, the seam ahead, and invertibility | `without_plan` |
+
+Rungs 1 and 2 exist only when `Layout::span` is set, which since
+[§8.4.17](#8417-the-default-flipped-and-what-moved) is the default. Without it the chain is
+$R_0\subsetneq\cdots\subsetneq R_4$ with rungs 3–6 renumbered down by two — the ladder
+[§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways) measured, and the one every figure published
+before [§8.4.15](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom) was written
+against. `compose::relaxed_of` carries the difference as a single `shift`, so the named relaxations keep
+naming their own constraint under either configuration.
+
+Two properties of the order are deliberate. It drops the generator's own convenience before §2.3's
+obligation system, because the plan is also what keeps the search tractable. And the two bounds that have a
+corpus-supplied looser setting **take it before they are dropped**, which is
+[§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways)'s repair of its own mistake: one rung shared
+between two constraints let the easier one go with the harder, and wrote back exactly what the easier one
+existed to stop.
+
+Which rung each block landed on is reported per block, and the interface panel names all five relaxations.
 
 #### The whole generator
 
@@ -750,6 +775,10 @@ The repair is cheap once the diagnosis is stated:
 
 That is not an approximation of the rulebook. It is what the rulebook says, and [§2.2](#22-counterpoint-is-a-finite-automaton) takes it literally.
 
+Panel (c) of the map at the head of [§2](#2-the-reformulation) draws the consequence rather than restating it: the
+same seventh, reached two ways — legal where it is tied over and refused where it is leapt into. A
+field over instantaneous pitch content has one object there. This has two.
+
 ### 1.2 Ricercar's own evidence against the continuum
 
 Two measurements, neither of them arguments:
@@ -769,6 +798,12 @@ times the margin the proof establishes, then the proof was over the wrong set.
 ---
 
 ## 2. The reformulation
+
+Everything in this section on one sheet, at the size it has to be to hold the numbers. It is drawn to
+be read panel by panel rather than at a glance, and each panel names the section that measured what it
+shows.
+
+![the whole algorithm on one sheet: a subject at the top, a finished fugue at the bottom, and every part in between with the section that measured it](docs/figures/algorithm-map.svg)
 
 ### 2.1 Exact arithmetic, and therefore no certificates
 
@@ -1091,6 +1126,10 @@ counterpoint. If no, it is too strict and *that is the finding*. Nothing is tune
 
 **The answer is both, and the split is the result** ([§8.8.1](#881-the-clique-test)): the full five-rule tier rejects
 Bach's hyperstretto and the two-rule tier accepts it, on both contested readings of the subject.
+
+![BWV 867’s five final entries as a compatibility graph: a clique under the two confirmed rules and not under all five, on both readings of the subject](docs/figures/clique-test.svg)
+
+The numbers on that plate are [§8.8.1](#881-the-clique-test)’s, where it appears again beside them.
 
 Note how much the test tightened by having the data. Ricercar spent [§7.5](ricercar/readme.md#75-the-real-subject-and-two-things-it-broke) and [§7.6](ricercar/readme.md#76-step-5-θ-calibrated-against-bach) establishing this passage from a
 score by hand and arrived at a real-valued threshold that then made the computation intractable. The same passage
@@ -1507,6 +1546,8 @@ Per thousand slices, or per thousand melodic moves for the melodic rule.
 **Two rules are confirmed by both corpora**, and they are precisely the two a roughness field cannot express, since
 a perfect fifth is among the smoothest intervals it knows. The part of the rulebook that most justified abandoning
 the continuum is the part that survives contact with the music.
+
+![the five hard rules as firings per thousand, Renaissance against Bach: two agree to within a factor and three differ by up to thirty-eight times](docs/figures/rulebook-ratio.svg)
 
 > **The axis the split falls along is *medium*, and the phrase above says so without following it.** The two
 > corpora differ in century and in instrument together, and *repertoire-specific* names the first. The melodic row
@@ -1928,6 +1969,8 @@ Every constraint added — the melodic rule, the two dissonance rules, a harmoni
 raises what a random legal choice is worth. None of it changes what the search picks out of that set by more than a
 few points. Constraint is doing all the work; the objective is doing almost none.
 
+![exact agreement barely moves across the whole table while the chance baseline nearly triples: constraint raises what a guess is worth and leaves the search where it was](docs/figures/constraint-not-objective.svg)
+
 **Is the objective wrong, or merely weak?** Three runs on the same tier, the same plan and the same 99 spans:
 reverse the sign of the objective, and **draw from the legal set uniformly instead of optimising over it at all**,
 which the search can do exactly because it already counts the paths through its own DAG.
@@ -2221,9 +2264,17 @@ answered it, and once by the one that did not:
 | 4 | 780–4 223 ms, either way | 0–2 ms | either, after the wait |
 | 5 | **0 ms**, refuses at once | 0–6 ms | the solver |
 
-**The five-voice row is the argument.** A block with five free voices is past
-`realise::MAXFREE`, so the exact search declines it before doing any work at all
-and the whole block costs milliseconds. A block with *four* is inside that limit
+> **`MAXFREE` was 4 when this was measured and is 6 now.** [§8.2.5](#825-restrict-a-layer-instead-of-refusing-it)
+> raised it in the same change that let a layer be restricted rather than refused, because a
+> five-free-voice block is the point of that. The rows stand as they were taken; what no longer holds
+> is the *reason* given for the refusal. `MAXFREE` is now the width of `Node`'s arrays and nothing
+> else, and the search's real limit is the layer width — which, since `LAYER` is `Some(100)` by
+> default, is also why `realise::MAX_WORK` never fires on the shipped path: both of its call sites
+> are guarded by `pr.width.is_none()`, so only an unrestricted fill has an edge budget at all.
+
+**The five-voice row is the argument.** A block with five free voices was past
+`realise::MAXFREE` when this was measured, so the exact search declined it before doing any work at all
+and the whole block cost milliseconds. A block with *four* is inside that limit
 and outside §8.2.1's measured wall of two, so the search is allowed to try, spends
 its entire work budget, and then hands over the same block to a solver that
 fills it in two milliseconds. **The cost is not the difficulty of the block. It
@@ -2374,6 +2425,8 @@ search refused and `compose` escalated to a solver — and [§8.4.3](#843-every-
 measured an arbitrary fill at `1.3%` against the composer, five points *below* the objective it replaced. Now
 four-fifths of it is drawn from the legal set, and the last relaxation is gone.
 
+![what restricting a layer to a hundred states costs the coverage and what it buys, at three to six voices](docs/figures/coverage.svg)
+
 ##### Why deleting is sound, and why it had to be deleting
 
 A restricted diagram keeps the `w` states the most paths reach and throws the rest away. Everything downstream of a
@@ -2418,7 +2471,16 @@ And the one nobody predicted: at two free voices, where the unrestricted search 
 of 200 keeps 13% of the legal set and agrees with Bach more often than keeping all of it** — `8.6%` against `7.2%`,
 while running nine times quicker. Keeping the states the most paths reach concentrates the draw on the roomiest part
 of the legal set, and that part is apparently the more Bach-like one. This is a correlation on 74 spans and not a
-mechanism, and it is the reason `LAYER` is 200 rather than a comfortable large number.
+mechanism, and it is the reason the width is a tuned number rather than a comfortable large one.
+
+> **Amended: the shipped width is 100, and this table is why it is not.** Everything above was measured at
+> **two** free voices, where a fill is cheap and only the width's effect on the *music* shows. At five the
+> width **is** the cost, and 200 was a third of a six-voice generate. `compose::LAYER` is `Some(100)`, and
+> `compose::SLICES` turns it into a per-block budget — `(LAYER × SLICES / slices)` floored at half — so a
+> block longer than `SLICES` gets a narrower diagram rather than a slower one. That is CLAUDE.md's *measure
+> at the depth the constraint binds* for the third time, and it is the same mistake as
+> [§8.2.4](#824-how-much-of-the-search-is-built-to-be-thrown-away)'s, made in the work that fixed it. The
+> figures in this subsection are left as they were taken, at 200.
 
 > **A caveat this table cannot remove.** The three instruments solve different subsets — the solver solves all of
 > them — so the agreement figures are not paired. The direction is consistent across three depths and the solver's
@@ -2604,6 +2666,31 @@ cost was a per-round rebuild of `realise::Fixed` that nothing had looked for. A 
 voices shallower than it is used was the other half. Both repairs and their figures are in
 [`CHANGELOG.md`](CHANGELOG.md). What generalises is the method: **a mechanism that would account for a slowdown
 is not evidence that it did**, and the measurement that settles it is usually ten minutes long.
+
+##### Which rungs, and what each one cost
+
+The same probe, re-run on the shipped **seven-rung** ladder — three six-voice generates from Bach’s
+own subjects, `Layout::default()`, `CONF_MEL`, seed `0x5EED`. It reproduces the count above exactly,
+and says something the count could not:
+
+| piece | blocks | at rung 0 | the block that climbed | rungs tried | whole generate |
+|---|---:|---:|---|---|---:|
+| BWV 847 | 15 | **15** | — | | 16.1 s |
+| BWV 852 | 15 | 14 | block 7, to **rung 1** | `5 811` → `10 210 ms` | 43.6 s |
+| BWV 861 | 15 | 14 | block 13, to **rung 5** | `17` `20` `30` `17` `13` → `2 513 ms` | 8.5 s |
+
+The denominator is every block including each piece’s opening entry, which has no free voice to fill
+and never enters the loop — `Run::attempts` is one slot per block and that slot stays at nought.
+
+**Two blocks in forty-five reach the ladder and neither is like the other.** One climbed a single rung
+and spent **sixteen seconds** doing it, better than a third of that piece’s whole generate. The other
+climbed **five** and spent two and a half, of which the five refusals were **ninety-seven milliseconds
+between them**. So the cost of the ladder is not a function of how far it is climbed: a rung that
+refuses does it in milliseconds, and what is expensive is always the one search that succeeds. Why rung
+five in particular is dear here is **not** measured, and by this section’s own rule that is where it
+stays.
+
+![the relaxation ladder, its two numberings, and where forty-five blocks actually stopped](docs/figures/relaxation-ladder.svg)
 
 ### 8.3 Counting a legal set nothing can enumerate
 
@@ -3388,12 +3475,98 @@ that would catch it if they stopped being one, they are what [§9](#9-roadmap) a
 > so where the key does not compress, the layer was capped by nothing at all. That is where the first `6 GB` came
 > from, and it would have reached `bounds_bracket` too.
 
+#### 8.3.10 The diagram is a ramp, and the widest layer is nowhere near the start
+
+`WIDTHS=1 cargo test --release --lib compose::tests::probe_layer_widths -- --ignored --nocapture`
+
+Nine subsections here are about counting the states in one diagram and not one of them ever looked at its
+shape. `realise::fill` kept `peak = peak.max(cur.nodes.len())` and threw the vector away, so the only
+things quotable were a maximum and the slice at which a *cap* happened to be exceeded — and
+[§8.5.5](#855-the-bound-moved-the-defect-one-step-sideways) read the second as if it were the first:
+
+> at two and three free voices the peak layer is reached at *slice one*
+
+**It is not.** One block of BWV 847’s subject — thirty-three layers, the shipped bound and band, the plan
+on, `CONF_MEL`. Unrestricted:
+
+```
+1 free   1 8 36 36 105 101 220 207 393 311 439 411 510 502 364 343 444 481 543 524 517
+         506 565 551 620 554 543 543 433 294 425 456 453          peak 620 at layer 24
+2 free   1 64 244 901 1558 2492 3777 4536 9858 1052 1579 1220 1547 1421 1307 1886 3814
+         2770 3826 3309 3545 3523 6005 4890 6010 3896 3481 2806 3363 865 1896 1686 1475
+                                                              peak 9 858 at layer 8
+3 free   refused at slice 2: 194 785 live against MAX_STATES = 60 000
+```
+
+**The widest layer is late, and after it the search collapses.** At one free voice the peak is at layer
+`24` of `32`; at two it is at layer `8`, and **layer `9` is a ninth of it** — `9 858` to `1 052` in one
+step — after which it wanders between one and six thousand and never comes near the peak again. Neither
+arm is a cliff and neither is a diamond.
+
+**What §8.5.5 was reading is a refusal message.** At three free voices the cap is exceeded at slice two
+and `fill` stops there, so `194 785 live at slice 2` — and the `160 449 live at slice 1` that subsection
+quotes — is where the search **died**, not where it was widest. A search that does not survive its third
+layer has no profile to have a peak in. The phenomenon it reported is still real: on `design()`’s own
+block the band arm and the no-band arm are identical layer for layer at two free voices, `1 56 814 2279
+2404` both, so the measure genuinely cannot see the band there. What does not survive is the explanation.
+
+##### Restriction changes the shape, not only the height
+
+The same block under `LAYER = 100`:
+
+```
+1 free   1 8 36 36 100 96 100 93 100 100 100 91 100 100 100 97 100 100 100 92 100 95 100
+         100 100 85 82 82 100 100 100 100 100        the cap first bites at layer 4
+2 free   1 64 100 100 100 …                                              at layer 2
+3 free   1 100 100 100 100 …                                             at layer 1
+```
+
+Two things are visible here that a peak cannot show. The layer at which the cap starts binding **moves
+earlier with every free voice added** — four, two, one. And **restriction compounds**: at one free voice
+the capped profile falls to `82` at layers `26` and `27`, where the unrestricted one is at `543`. A layer
+cut to a hundred does not always have a hundred successors, because the ancestors that would have
+produced them were cut at an earlier layer. That is
+[§8.3.5](#835-a-restricted-count-is-not-a-count-and-the-texture-was-drawn-from-two-of-them)’s bias seen
+from the other side, and it is why a restricted count is a lower bound whose error grows with the density
+rather than a constant fraction of the truth.
+
+What it buys, on this block: at two free voices `193 ms` against `9 096` — **forty-seven times** — for a
+peak of `100` against `9 858`. At three the comparison is `361 ms` against no answer at all.
+
+##### What one layer is made of
+
+`NODES=1` on the same command prints the first three layers node by node, which is the only way anything
+in this repository can show what a state of this diagram actually **is**. At one free voice, layer two:
+
+| | |
+|---|---:|
+| states | **36** |
+| distinct pitches among them | **16** |
+| edges arriving | **51** |
+| the most states one pitch carries | **4**, and **five** pitches do it — F♯4, G4, B4, D5, F♯5 |
+
+**The same pitch is four different states, on five of the sixteen**, and that is [§1.1](#11-the-state-is-a-point-not-a-transition)
+made concrete: a state carries the previous vertical of every pair as well as the pitch each voice sounds,
+so two nodes on the same note reached from different notes are not the same node. Every `owed` in these
+three layers is nought — no dissonance has been prepared yet this early — so the multiplication here is
+`prev` alone, before the obligation set has started to contribute anything.
+
+> **An edge effect worth noticing, and not settled here.** Layer one holds `C-4`, which is the program’s
+> spelling for a C flat, and its free voice’s compass is diatonic steps `28..40` — so B3, one step below
+> the floor, is out of range while the same sounding pitch spelled `C-4` is in it. A compass counted in
+> diatonic steps has that edge on it by construction. Whether the chord’s respelling should offer it is a
+> question this section raises and does not answer.
+
+![the shape of the search: thirty-three layers, and what one layer is made of](docs/figures/search-shape.svg)
+
 ### 8.4 Nothing prefers one legal fill to another
 
 The central negative result, and the one lever that survived it. `10^12` to `10^18` legal fills of a three-bar span;
 an objective measurably worse than no objective; every criterion the project can transcribe swept across the whole
 temperature range between the two and found inert; and a correct harmonic plan, which is the only thing tried that
 moves more than a point in both centuries.
+
+![every candidate this section proposed, plotted as its gain on each corpus over that corpus’s own control, with the two-standard-error rule drawn as the region it is](docs/figures/adoption-plane.svg)
 
 #### 8.4.1 Every step-6 failure is a deficiency, not an excess
 
@@ -6113,7 +6286,7 @@ seventeen pitches on a *comfortable* piece; a block that has already relaxed its
 > was sound, where the measurement was a suite that already existed and took twelve minutes. The tell is that the
 > argument was about what a voice *can* do and the failure is about what a voice is *left* with.
 
-So it is the ladder's **first** rung, before the join and the plan, ordered by what the loss does to the music: a
+So it goes on a rung of its own, below the join and the plan, ordered by what the loss does to the music: a
 run of four is something Bach writes himself and his longest is six, a leap of an eleventh across a seam is not,
 and the plan is worth `+2.36` ([§8.4.2](#842-a-better-harmonic-plan-is-the-first-lever-worth-more-than-a-point)) as
 well as being what keeps the search tractable. `Relaxed::without_run` reports it and the interface panel names it,
@@ -6250,7 +6423,14 @@ therefore cannot refuse anything he writes. Only the rung below that abandons th
 | 3 | the join to the previous block |
 | 4 | the harmonic plan, the seam ahead, and invertibility |
 
-`Relaxed::without_band` reports the first and the interface panel names all four. The reported piece takes rung one
+> **That is the ladder this section measured, and it is no longer the shipped one.**
+> [§8.4.15](#8415-a-compass-is-a-range-and-the-search-had-been-reading-it-as-freedom) inserts two rungs
+> below all of these when `Layout::span` is set, and
+> [§8.4.17](#8417-the-default-flipped-and-what-moved) made that the default — so the ladder a reader gets
+> today is seven rungs and the five above are its rungs two to six. The Formalization carries the whole
+> chain; the numbers in this subsection are the unbounded arm and stand as they were measured.
+
+`Relaxed::without_band` reports the first and the interface panel names all of them. The reported piece takes rung one
 on two of its seventeen blocks and rung two on one of them — and that one block is where its longest run of four
 comes from, which is the cost of the ladder being a ladder and is reported rather than smoothed over.
 
@@ -6539,6 +6719,8 @@ or a descending scale in a minor key he would use the major sixth in the ascendi
 the descending scale."* So `A♮` belongs to C minor in the run `G A B` and nowhere else, and `B♭` in the run
 `C B♭ A♭` and nowhere else. That is the **melodic convention** — `key::convention` — and it is a direction rather
 than a second collection.
+
+![a key as a box on the fifths-and-thirds network: seven positions either way, a different shape in major and in minor, and what the correction is worth](docs/figures/key-box.svg)
 
 ##### And the search is elimination
 
@@ -7196,6 +7378,10 @@ than the template does, so the fault is the rulebook's rather than the model of 
 violation is a direct motion to a perfect consonance on a downbeat between the two middle voices — present in Bach,
 absent from the idealisation.
 
+The plate at [§3.1](#31-the-calibration-disappears) is this measurement drawn, and is repeated here where its numbers are:
+
+![BWV 867’s five final entries as a compatibility graph: a clique under the two confirmed rules and not under all five, on both readings of the subject](docs/figures/clique-test.svg)
+
 #### 8.8.2 Capacity ranks subjects but cannot design one
 
 Capacity is the **edge density** of the compatibility graph under the two-rule tier, over every diatonic
@@ -7516,7 +7702,7 @@ can use.**
 Dropping the last entry fixes all three, and is what a stretto sounds like
 anyway: the entries pile up over a part that keeps going.
 
-*Amended by [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent):* dropping it
+*Amended by [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements):* dropping it
 *afterwards* is the wrong place, because the best three of four are not the first
 three of the best four. `places` is the same limit given to the search instead.
 
@@ -7570,7 +7756,7 @@ carries the current ones and the reason they moved.
 
 Two statements and not five: the clique is computed against `HARD` and the
 greedy pass keeps only entries that clear every entry already kept, so this is a
-floor rather than the subject's true capacity — [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent)
+floor rather than the subject's true capacity — [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements)
 measures how far below it, and lifts the book's total from 78% of what the
 cliques admit to 93%, leaving these two where they are. Bach's own rate on the full tier
 is 53.8 per thousand ([§8.1.5](#815-the-dissonance-rules-need-a-metre-the-automaton-lacked)),
@@ -7633,12 +7819,12 @@ entries to keep among those the clique allows is a choice, and it is taken
 greedily in time order with nothing measuring the alternatives. Dragging one out
 of the palette is still the only way to put a stretto anywhere but the end.
 
-*Answered by [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent):* the greed
+*Answered by [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements):* the greed
 cost nothing, the arbitrary clique cost forty-five statements across the book,
 and the pop below cost §8.7.3's own fugue eleven violations per thousand. The
 palette is still the only way to move a stretto.
 
-#### 8.8.6 Choosing the clique arbitrarily cost forty-five per cent
+#### 8.8.6 Choosing the clique arbitrarily cost forty-five statements
 
 `src/compose.rs`, `src/stretto.rs`.
 
@@ -7801,7 +7987,7 @@ goes in the block that was already going to state the subject.
 
 `src/compose.rs`.
 
-[§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent)
+[§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements)
 found the stretto losing entries to [§8.8.3](#883-two-faults-of-register)'s
 octave fold and bought some of them back by looking at sixty-four cliques instead
 of one. It had the mechanism right and the direction only half right. **The fold
@@ -8099,6 +8285,14 @@ compass, stacked a fourth apart; full five-rule tier.
 | 9 | 8 | past `MAXV` | 36 ms | 69 | 9 868 | 0 |
 | 10 | 9 | past `MAXV` | 8 569 ms | 7 124 | 688 196 | 0 |
 
+> **`MAXFREE` was 4 when this was measured and is 6 now.** [§8.2.5](#825-restrict-a-layer-instead-of-refusing-it)
+> raised it in the same change that let a layer be restricted rather than refused, because a
+> five-free-voice block is the point of that. The rows stand as they were taken; what no longer holds
+> is the *reason* given for the refusal. `MAXFREE` is now the width of `Node`'s arrays and nothing
+> else, and the search's real limit is the layer width — which, since `LAYER` is `Some(100)` by
+> default, is also why `realise::MAX_WORK` never fires on the shipped path: both of its call sites
+> are guarded by `pr.width.is_none()`, so only an unrestricted fill has an edge budget at all.
+
 Both refusals are the state explosion and say so: 4 000 013 edges relaxed at
 slice 2 with three free voices, 4 000 055 at slice 1 with four. The last column
 is `corpus::check_voices` over every pair of the returned fill, on the same tier.
@@ -8211,8 +8405,9 @@ counts are identical either side and so is every whole-piece fingerprint the
 suite compares. Seven is the *cheapest* of the three, which is the shape of the
 cost rather than a surprise: it is past `realise::MAXV`, so the exact search
 declines it in the time it takes to compare two integers and every block goes
-straight to the solver. Five voices sits at exactly `MAXFREE`, where the search
-spends its entire work budget on each block before admitting it cannot help.
+straight to the solver. Five voices sat at exactly `MAXFREE` when this was measured, where the search
+spent its entire work budget on each block before admitting it could not help — see the note under
+[§8.9.1](#891-the-wall-was-in-the-wrong-place)'s table for what that limit is now.
 
 The interface stops at six, because six is where the exact search's own limits
 stop. Seven is reachable and is not offered: a count only one of the two
@@ -8596,6 +8791,8 @@ instrument and listing what follows, and it says which part of that is cheap: *"
 is the playability question, which is a **checker** and therefore the kind of thing this repository is made of:
 over §8.7.3's own published fugue, how many slices divide into two hands?"* This is that checker. The answer to the
 question as asked is 385 of 386, and it is not the number that matters.
+
+![where a generated piece stops being playable by two hands, as the voice count rises](docs/figures/hands-reach.svg)
 
 **The spans are somebody else's.** Parncutt, Sloboda, Clarke, Raekallio and Desain, *"An Ergonomic Model of Keyboard
 Fingering for Melodic Fragments"*, *Music Perception* **14**(4), 1997, Table 1 — minimum and maximum *practical*,
@@ -9135,6 +9332,8 @@ in miniature, on a case small enough to measure exactly, and that is what makes 
   and four gives `3.5%` while refusing about an eighth of his own writing. A uniform draw held to his limits does
   not have his shape, which is this item in one sentence and is why no ceiling closes it.
 
+  ![three bounds in succession, each removing the way of standing still that the one before it left open](docs/figures/displacement-ratchet.svg)
+
   **A criterion now exists and [§8.4.14](#8414-why-the-band-cannot-reach-and-the-first-dial-the-generator-starts-inside) says what it
   cannot do.** [§8.4.12](#8412-an-affect-as-a-band-that-varies-over-the-piece-and-the-two-dials-it-cannot-yet-reach)
   built one that selects among uniform draws — a band, never a direction — and it works mechanically and moves
@@ -9475,8 +9674,9 @@ compared, and this would make the truncation worse exactly there.
   satisfy**. Change the plan and you change what is feasible, and a constraint that makes something
   infeasible is invisible to a table of what succeeded — the `ui/` suite is the only thing that has
   ever caught one.
-- [§8.4.17](#8417-the-default-flipped-and-what-moved) is the fourth time a bound has pushed the draw
-  onto the next-cheapest thing. A band on harmony needs the same neighbourhood measured before it is
+- [§8.4.17](#8417-the-default-flipped-and-what-moved) is the third bound to push the draw onto the
+  next-cheapest thing — the chain [§9.5](#95-open-problems-in-rough-order-of-how-much-they-block) lists,
+  which owns the count. A band on harmony needs the same neighbourhood measured before it is
   believed.
 - [§8.4.3](#843-every-positive-criterion-has-a-degenerate-optimum) is why this has to stay *draw
   uniformly, then band*. A criterion that picks chords directly has a cheapest way to be satisfied,
@@ -9555,8 +9755,8 @@ the Josquin Research Project for the Renaissance scores.
 | [§8.9.1](#891-the-wall-was-in-the-wrong-place) the solver's reach | `cargo test --release --lib solve::tests::probe_reach -- --ignored --nocapture` |
 | [§8.9.1](#891-the-wall-was-in-the-wrong-place) what the cores are worth | `cargo test --release --lib solve::tests::probe_parallel -- --ignored --nocapture` |
 | [§8.9.2](#892-what-a-rest-was-really-for) how many voices compose | `cargo test --release --lib compose::tests::probe_voices -- --ignored --nocapture` |
-| [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent) what the packing keeps | `cargo test --release --lib compose::tests::probe_packing -- --ignored --nocapture` |
-| [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-per-cent) the same on §8.7.3's fugue | `cargo test --release --lib compose::tests::probe_packing_847 -- --ignored --nocapture` |
+| [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements) what the packing keeps | `cargo test --release --lib compose::tests::probe_packing -- --ignored --nocapture` |
+| [§8.8.6](#886-choosing-the-clique-arbitrarily-cost-forty-five-statements) the same on §8.7.3's fugue | `cargo test --release --lib compose::tests::probe_packing_847 -- --ignored --nocapture` |
 | [§8.8.7](#887-the-register-is-part-of-the-search-not-a-correction-applied-after-it) what the octave-aware search reaches | `cargo test --release --lib compose::tests::probe_octave_ceiling -- --ignored --nocapture` |
 | [§8.6.4](#864-forty-eight-out-of-forty-eight) key by elimination, and three minor collections | `cargo run --release -- network` |
 | [§8.9.6](#896-where-the-voice-count-stops-being-a-keyboard-piece) whether two hands can reach it | `cargo run --release -- hands` |
@@ -9581,6 +9781,7 @@ the Josquin Research Project for the Renaissance scores.
 | [§8.10.1](#8101-the-whole-history-of-one-number-is-two-commits) the default, taken apart | `cargo test --release --lib compose::tests::probe_default -- --ignored --nocapture` |
 | [§8.10.1](#8101-the-whole-history-of-one-number-is-two-commits) the same figure at every commit | `bash docs/history-rule-firings.sh` |
 | [§8.5.4](#854-bound-the-run-and-the-width-cap-pays-for-it) what the counter costs the layer | `cargo test --release --lib compose::tests::probe_run_states -- --ignored --nocapture` |
+| [§8.3.10](#8310-the-diagram-is-a-ramp-and-the-widest-layer-is-nowhere-near-the-start) the shape of the search, layer by layer | `WIDTHS=1 NODES=1 cargo test --release --lib compose::tests::probe_layer_widths -- --ignored --nocapture` |
 | [§8.7.6](#876-the-generator-against-the-book) why the exposition never parses as unbroken | `cargo test --release --lib compose::tests::probe_exposition -- --ignored --nocapture` |
 | [§8.2.4](#824-how-much-of-the-search-is-built-to-be-thrown-away) how much of the product survives, by depth | `cargo test --release --bin contrapunctus branching -- --ignored --nocapture` |
 | every cross-reference in the repository | `cargo test --release --test references` |
